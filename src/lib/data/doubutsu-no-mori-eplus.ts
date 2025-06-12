@@ -764,6 +764,104 @@ const fish: FishOrBug[] = [
       september: Month.ALL
     },
     wikiPage: 'Arapaima#In_Animal_Crossing'
+  },
+  // 33
+  {
+    name: 'Crawfish',
+    icon: 'crawfish.png',
+    type: Creature.FISH,
+    price: 250,
+    shadow: Shadow.SMALL,
+    location: [Location.POND],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.FIRST_HALF
+    },
+    wikiPage: 'Crawfish#In_Animal_Crossing'
+  },
+  // 34
+  {
+    name: 'Frog',
+    icon: 'frog.png',
+    type: Creature.FISH,
+    price: 250,
+    shadow: Shadow.TINY,
+    location: [Location.POND],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Frog#In_Animal_Crossing'
+  },
+  // 35
+  {
+    name: 'Killifish',
+    icon: 'killifish.png',
+    type: Creature.FISH,
+    price: 300,
+    shadow: Shadow.TINY,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Killifish#In_Animal_Crossing'
+  },
+  // 36
+  {
+    name: 'Jellyfish',
+    icon: 'jellyfish.png',
+    type: Creature.FISH,
+    price: 100,
+    shadow: Shadow.MEDIUM,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      august: Month.SECOND_HALF
+    },
+    wikiPage: 'Jellyfish#In_Animal_Crossing'
+  },
+  // 37
+  {
+    name: 'Sea bass',
+    icon: 'sea-bass.png',
+    type: Creature.FISH,
+    price: 120,
+    shadow: Shadow.LARGE,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.FIRST_HALF,
+      september: Month.SECOND_HALF,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Sea_bass#In_Animal_Crossing'
   }
 ];
 
