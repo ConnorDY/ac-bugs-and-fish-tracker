@@ -139,7 +139,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Barbel_steed#In_Animal_Crossing'
   },
   // 6
   {
@@ -169,7 +170,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Dace#In_Animal_Crossing'
   },
   // 7
   {
@@ -193,7 +195,8 @@ const fish: FishOrBug[] = [
       august: Month.ALL,
       september: Month.ALL,
       october: Month.ALL
-    }
+    },
+    wikiPage: 'Catfish#In_Animal_Crossing'
   },
   // 8
   {
@@ -214,7 +217,8 @@ const fish: FishOrBug[] = [
       june: Month.ALL,
       july: Month.ALL,
       august: Month.ALL
-    }
+    },
+    wikiPage: 'Giant_catfish#In_Animal_Crossing'
   },
   // 9
   {
@@ -244,7 +248,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Pale_chub#In_Animal_Crossing'
   },
   // 10
   {
@@ -260,7 +265,8 @@ const fish: FishOrBug[] = [
       january: Month.ALL,
       february: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Bitterling#In_Animal_Crossing'
   },
   // 11
   {
@@ -276,7 +282,8 @@ const fish: FishOrBug[] = [
       march: Month.ALL,
       april: Month.ALL,
       may: Month.ALL
-    }
+    },
+    wikiPage: 'Loach#In_Animal_Crossing'
   },
   // 12
   {
@@ -306,7 +313,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Bluegill#In_Animal_Crossing'
   },
   // 13
   {
@@ -331,7 +339,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Small_bass#In_Animal_Crossing'
   },
   // 14
   {
@@ -356,7 +365,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Bass#In_Animal_Crossing'
   },
   // 15
   {
@@ -381,7 +391,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Large_bass#In_Animal_Crossing'
   }
 ];
 
@@ -521,5 +532,7 @@ export const DoubutsuNoMoriEPlus: Game = {
   releaseDate: '2003-06-27',
   languages: ['japanese'],
   fish,
-  bugs
+  bugs,
+  fishWikiPage: 'Fish/Doubutsu_no_Mori_e%2B',
+  bugsWikiPage: 'Bug/Doubutsu_no_Mori_e%2B'
 };

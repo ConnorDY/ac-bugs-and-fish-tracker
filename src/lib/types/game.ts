@@ -7,4 +7,6 @@ export interface Game {
   languages: string[];
   fish: FishOrBug[];
   bugs: FishOrBug[];
+  fishWikiPage: string;
+  bugsWikiPage: string;
 }
