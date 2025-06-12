@@ -50,6 +50,10 @@
 </tr>
 
 <style lang="scss">
+  .fish-row:nth-child(odd) {
+    background-color: var(--color-gray-900);
+  }
+
   .fish-shadow {
     display: flex;
     align-items: center;
