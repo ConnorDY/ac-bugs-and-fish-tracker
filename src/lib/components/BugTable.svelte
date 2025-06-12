@@ -14,6 +14,7 @@
     <tr>
       <th class="px-3 py-3">#</th>
       <th class="px-3 py-3">Caught?</th>
+      <th class="px-3 py-3">Donated?</th>
       <th class="px-3 py-3">Name</th>
       <th class="px-3 py-3">Icon</th>
       <th class="px-3 py-3">Sell price</th>
