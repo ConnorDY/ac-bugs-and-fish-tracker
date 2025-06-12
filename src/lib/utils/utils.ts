@@ -36,7 +36,7 @@ export function renderTime(time: Time): string {
 
   return (time as TimeRange[])
     .map((t) => `${convert24HourTo12Hour(t.start)} – ${convert24HourTo12Hour(t.end)}`)
-    .join(' ');
+    .join('; ');
 }
 
 export function renderWeather(weather: Weather): string {

@@ -393,6 +393,209 @@ const fish: FishOrBug[] = [
       december: Month.ALL
     },
     wikiPage: 'Large_bass#In_Animal_Crossing'
+  },
+  // 16
+  {
+    name: 'Giant snakehead',
+    icon: 'giant-snakehead.png',
+    type: Creature.FISH,
+    price: 6500,
+    shadow: Shadow.VERY_LARGE,
+    location: [Location.LAKE],
+    weather: Weather.ANY,
+    time: [
+      { start: 9, end: 16 } // 9 AM to 4 PM
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Giant_snakehead#In_Animal_Crossing'
+  },
+  // 17
+  {
+    name: 'Eel',
+    icon: 'eel.png',
+    type: Creature.FISH,
+    price: 2000,
+    shadow: Shadow.MEDIUM,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [{ start: 16, end: 9 }], // 4 PM to 9 AM
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Eel#In_Animal_Crossing'
+  },
+  // 18
+  {
+    name: 'Freshwater goby',
+    icon: 'freshwater-goby.png',
+    type: Creature.FISH,
+    price: 300,
+    shadow: Shadow.SMALL,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Freshwater_goby#In_Animal_Crossing'
+  },
+  // 19
+  {
+    name: 'Pond smelt',
+    icon: 'pond-smelt.png',
+    type: Creature.FISH,
+    price: 300,
+    shadow: Shadow.TINY,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Pond_smelt#In_Animal_Crossing'
+  },
+  // 20
+  {
+    name: 'Sweetfish',
+    icon: 'sweetfish.png',
+    type: Creature.FISH,
+    price: 1300,
+    shadow: Shadow.SMALL,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Sweetfish#In_Animal_Crossing'
+  },
+  // 21
+  {
+    name: 'Cherry salmon',
+    icon: 'cherry-salmon.png',
+    type: Creature.FISH,
+    price: 1300,
+    shadow: Shadow.SMALL,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      { start: 4, end: 9 }, // 4 AM to 9 AM
+      { start: 16, end: 9 } // 4 PM to 9 AM
+    ],
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Cherry_salmon#In_Animal_Crossing'
+  },
+  // 22
+  {
+    name: 'Rainbow trout',
+    icon: 'rainbow-trout.png',
+    type: Creature.FISH,
+    price: 650,
+    shadow: Shadow.MEDIUM,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      { start: 4, end: 9 }, // 4 AM to 9 AM
+      { start: 16, end: 9 } // 4 PM to 9 AM
+    ],
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Rainbow_trout#In_Animal_Crossing'
+  },
+  // 23
+  {
+    name: 'Large char',
+    icon: 'large-char.png',
+    type: Creature.FISH,
+    price: 10000,
+    shadow: Shadow.LARGE,
+    location: [Location.WATERFALL],
+    weather: Weather.ANY,
+    time: [
+      { start: 4, end: 9 }, // 4 AM to 9 AM
+      { start: 16, end: 9 } // 4 PM to 9 AM
+    ],
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Large_char#In_Animal_Crossing'
+  },
+  // 24
+  {
+    name: 'Stringfish',
+    icon: 'stringfish.png',
+    type: Creature.FISH,
+    price: 15000,
+    shadow: Shadow.VERY_LARGE,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      { start: 16, end: 9 } // 4 PM to 9 AM
+    ],
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Stringfish#In_Animal_Crossing'
+  },
+  // 25
+  {
+    name: 'Salmon',
+    icon: 'salmon.png',
+    type: Creature.FISH,
+    price: 650,
+    shadow: Shadow.LARGE,
+    location: [Location.RIVER_MOUTH],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      september: Month.ALL
+    },
+    wikiPage: 'Salmon#In_Animal_Crossing'
   }
 ];
 
