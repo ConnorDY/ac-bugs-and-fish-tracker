@@ -264,6 +264,7 @@ const fish: FishOrBug[] = [
     months: {
       january: Month.ALL,
       february: Month.ALL,
+      // ...
       december: Month.ALL
     },
     wikiPage: 'Bitterling#In_Animal_Crossing'
@@ -470,6 +471,7 @@ const fish: FishOrBug[] = [
     months: {
       january: Month.ALL,
       february: Month.ALL,
+      // ...
       december: Month.ALL
     },
     wikiPage: 'Pond_smelt#In_Animal_Crossing'
@@ -509,6 +511,7 @@ const fish: FishOrBug[] = [
       april: Month.ALL,
       may: Month.ALL,
       june: Month.ALL,
+      // ...
       september: Month.ALL,
       october: Month.ALL,
       november: Month.ALL
@@ -533,6 +536,7 @@ const fish: FishOrBug[] = [
       april: Month.ALL,
       may: Month.ALL,
       june: Month.ALL,
+      // ...
       september: Month.ALL,
       october: Month.ALL,
       november: Month.ALL
@@ -542,6 +546,7 @@ const fish: FishOrBug[] = [
   // 23
   {
     name: 'Large char',
+    altName: ['Char'],
     icon: 'large-char.png',
     type: Creature.FISH,
     price: 10000,
@@ -557,6 +562,7 @@ const fish: FishOrBug[] = [
       april: Month.ALL,
       may: Month.ALL,
       june: Month.ALL,
+      // ...
       september: Month.ALL,
       october: Month.ALL,
       november: Month.ALL
@@ -825,6 +831,7 @@ const fish: FishOrBug[] = [
   // 36
   {
     name: 'Jellyfish',
+    altName: ['Moon jellyfish'],
     icon: 'jellyfish.png',
     type: Creature.FISH,
     price: 100,
@@ -856,12 +863,281 @@ const fish: FishOrBug[] = [
       june: Month.ALL,
       july: Month.ALL,
       august: Month.FIRST_HALF,
+      // ...
       september: Month.SECOND_HALF,
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
     },
     wikiPage: 'Sea_bass#In_Animal_Crossing'
+  },
+  // 38
+  {
+    name: 'Horse mackerel',
+    icon: 'horse-mackerel.png',
+    type: Creature.FISH,
+    price: 120,
+    shadow: Shadow.MEDIUM,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.FIRST_HALF,
+      // ...
+      september: Month.SECOND_HALF,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Horse_mackerel#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 39
+  {
+    name: 'Red snapper',
+    icon: 'red-snapper.png',
+    type: Creature.FISH,
+    price: 3000,
+    shadow: Shadow.LARGE,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.FIRST_HALF,
+      september: Month.SECOND_HALF,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Red_snapper#In_Animal_Crossing'
+  },
+  // 40
+  {
+    name: 'Barred knifejaw',
+    icon: 'barred-knifejaw.png',
+    type: Creature.FISH,
+    price: 5000,
+    shadow: Shadow.LARGE,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Barred_knifejaw#In_Animal_Crossing'
+  },
+  // 41
+  {
+    name: 'Balloonfish',
+    altName: ['Puffer fish'],
+    icon: 'balloonfish.png',
+    type: Creature.FISH,
+    price: 200,
+    shadow: Shadow.MEDIUM,
+    location: [Location.ANIMAL_ISLAND],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Puffer_fish#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 42
+  {
+    name: 'Dab',
+    icon: 'dab.png',
+    type: Creature.FISH,
+    price: 800,
+    shadow: Shadow.LARGE,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      // ...
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Dab#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 43
+  {
+    name: 'Olive flounder',
+    icon: 'olive-flounder.png',
+    type: Creature.FISH,
+    price: 200,
+    shadow: Shadow.LARGE,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Olive_flounder#In_Animal_Crossing'
+  },
+  // 44
+  {
+    name: 'Squid',
+    icon: 'squid.png',
+    type: Creature.FISH,
+    price: 400,
+    shadow: Shadow.MEDIUM,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      // ...
+      december: Month.ALL
+    },
+    wikiPage: 'Squid#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 45
+  {
+    name: 'Octopus',
+    icon: 'octopus.png',
+    type: Creature.FISH,
+    price: 450,
+    shadow: Shadow.LARGE,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      // ...
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      // ...
+      september: Month.SECOND_HALF,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Octopus_(creature)#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 46
+  {
+    name: 'Seahorse',
+    altName: ['Sea horse'],
+    icon: 'seahorse.png',
+    type: Creature.FISH,
+    price: 1500,
+    shadow: Shadow.TINY,
+    location: [Location.SEA],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Sea_horse#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 47
+  {
+    name: 'Blue marlin',
+    icon: 'blue-marlin.png',
+    type: Creature.FISH,
+    price: 10000,
+    shadow: Shadow.HUGE,
+    location: [Location.ANIMAL_ISLAND],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Blue_marlin#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 48
+  {
+    name: 'Coelacanth',
+    icon: 'coelacanth.png',
+    type: Creature.FISH,
+    price: 15000,
+    shadow: Shadow.VERY_LARGE,
+    location: [Location.SEA],
+    weather: Weather.RAINING,
+    time: [
+      {
+        start: 16, // 4 PM
+        end: 9 // 9 AM
+      }
+    ],
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Coelacanth#In_Animal_Crossing'
   }
 ];
 
@@ -966,6 +1242,7 @@ const bugs: FishOrBug[] = [
   // 5
   {
     name: "Alexandra's swallowtail butterfly",
+    altName: ["Queen Alexandra's birdwing", 'Birdwing', 'Birdwing butterfly'],
     icon: 'alexandras-swallowtail-butterfly.png',
     type: Creature.BUG,
     price: 3000,

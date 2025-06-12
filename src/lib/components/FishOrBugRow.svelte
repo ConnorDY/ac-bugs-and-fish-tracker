@@ -2,6 +2,7 @@
   import { wikiUrl } from '$lib/data/wiki';
   import type { FishOrBug } from '$lib/types/fish-or-bug';
   import type { Game } from '$lib/types/game';
+  import { Weather } from '$lib/types/shared';
   import {
     renderKebabCaseValue,
     renderLocation,
@@ -71,6 +72,12 @@
 
   <td class="creature-location px-3 py-2">
     {renderLocation(data.location)}
+
+    {#if isFish && data.weather !== Weather.ANY}
+      <span>
+        ({renderKebabCaseValue(data.weather).toLowerCase()})
+      </span>
+    {/if}
   </td>
 
   {#if isBug}
