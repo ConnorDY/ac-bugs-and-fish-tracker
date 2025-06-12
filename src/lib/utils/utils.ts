@@ -8,17 +8,19 @@ export function capitalizeFirstLetter(str: string): string {
 export function renderKebabCaseValue(str: string, capitalizeEach = false): string {
   const words = str.split('-');
 
-  return words
+  const renderedWords = words
     .map((word, i) => (capitalizeEach || i === 0 ? capitalizeFirstLetter(word) : word))
     .join(' ');
+
+  return renderedWords.replaceAll('_', '-'); // Replace underscores with hyphens
 }
 
 export function renderLocation(location: Location[] | string): string {
   if (typeof location === 'string') {
-    return capitalizeFirstLetter(location);
+    return renderKebabCaseValue(location);
   }
 
-  return (location as Location[]).map((loc) => capitalizeFirstLetter(loc)).join(' ');
+  return (location as Location[]).map((loc) => renderKebabCaseValue(loc)).join(' ');
 }
 
 export function convert24HourTo12Hour(hour: number): string {

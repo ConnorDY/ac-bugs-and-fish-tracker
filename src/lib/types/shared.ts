@@ -24,7 +24,7 @@ export enum Location {
   // bug locations
   FLYING = 'flying',
   FLYING_AROUND_TREES = 'flying-around-trees',
-  FLYING_AROUND_NON_PALM_TREES = 'flying-around-non-palm-trees',
+  FLYING_AROUND_NON_PALM_TREES = 'flying-around-non_palm-trees',
   FLYING_NEAR_WATER = 'flying-near-water',
   ON_FLOWERS = 'on-flowers',
   IN_BUSHES = 'in-bushes',

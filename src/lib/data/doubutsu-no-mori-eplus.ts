@@ -454,6 +454,55 @@ const bugs: FishOrBug[] = [
       august: Month.ALL,
       september: Month.ALL
     }
+  },
+  // 4
+  {
+    name: 'Purple butterfly',
+    icon: 'purple-butterfly.png',
+    type: Creature.BUG,
+    price: 2000,
+    location: [Location.FLYING_AROUND_TREES],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL
+    }
+  },
+  // 5
+  {
+    name: "Alexandra's swallowtail butterfly",
+    icon: 'alexandras-swallowtail-butterfly.png',
+    type: Creature.BUG,
+    price: 3000,
+    location: [Location.FLYING_AROUND_NON_PALM_TREES],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    }
   }
 ];
 
