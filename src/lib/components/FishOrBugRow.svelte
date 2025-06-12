@@ -29,11 +29,18 @@
 
   <td class="fish-icon px-3 py-2"><img src={iconPath} alt={`${data.name} icon`} /></td>
 
-  <td class="fish-price px-3 py-2">{data.price}</td>
+  <td class="fish-price px-3 py-2">
+    <div>
+      <img src="/icons/bells.png" alt="Bells icon" />
+      <span>{data.price.toLocaleString()} bells</span>
+    </div>
+  </td>
 
   <td class="fish-shadow px-3 py-2">
-    <img src={shadowIconPath} alt="" aria-hidden={true} />
-    {renderKebabCaseValue(data.shadow!, true)}
+    <div>
+      <img src={shadowIconPath} alt="" aria-hidden={true} />
+      <span>{renderKebabCaseValue(data.shadow!, true)}</span>
+    </div>
   </td>
 
   <td class="fish-location px-3 py-2">
@@ -54,7 +61,13 @@
     background-color: var(--color-gray-900);
   }
 
-  .fish-shadow {
+  .fish-price > div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .fish-shadow > div {
     display: flex;
     align-items: center;
 

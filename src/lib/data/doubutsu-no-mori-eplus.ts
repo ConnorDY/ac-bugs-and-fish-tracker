@@ -247,6 +247,122 @@ const fish: FishOrBug[] = [
       february: Month.ALL,
       december: Month.ALL
     }
+  },
+  // 11
+  {
+    name: 'Loach',
+    icon: 'loach.png',
+    type: Creature.FISH,
+    price: 300,
+    shadow: Shadow.TINY,
+    location: [Location.RIVER],
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL
+    }
+  },
+  // 12
+  {
+    name: 'Bluegill',
+    icon: 'bluegill.png',
+    type: Creature.FISH,
+    price: 120,
+    shadow: Shadow.SMALL,
+    location: [Location.RIVER],
+    time: [
+      {
+        start: 9, // 9 AM
+        end: 16 // 4 PM
+      }
+    ],
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    }
+  },
+  // 13
+  {
+    name: 'Small bass',
+    icon: 'small-bass.png',
+    type: Creature.FISH,
+    price: 200,
+    shadow: Shadow.SMALL,
+    location: [Location.RIVER],
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    }
+  },
+  // 14
+  {
+    name: 'Bass',
+    icon: 'bass.png',
+    type: Creature.FISH,
+    price: 300,
+    shadow: Shadow.MEDIUM,
+    location: [Location.RIVER],
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    }
+  },
+  // 15
+  {
+    name: 'Large bass',
+    icon: 'large-bass.png',
+    type: Creature.FISH,
+    price: 3000,
+    shadow: Shadow.LARGE,
+    location: [Location.RIVER],
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    }
   }
 ];
 
