@@ -502,7 +502,7 @@ const fish: FishOrBug[] = [
     weather: Weather.ANY,
     time: [
       { start: 4, end: 9 }, // 4 AM to 9 AM
-      { start: 16, end: 9 } // 4 PM to 9 AM
+      { start: 16, end: 21 } // 4 PM to 9 PM
     ],
     months: {
       march: Month.ALL,
@@ -526,7 +526,7 @@ const fish: FishOrBug[] = [
     weather: Weather.ANY,
     time: [
       { start: 4, end: 9 }, // 4 AM to 9 AM
-      { start: 16, end: 9 } // 4 PM to 9 AM
+      { start: 16, end: 21 } // 4 PM to 9 PM
     ],
     months: {
       march: Month.ALL,
@@ -550,7 +550,7 @@ const fish: FishOrBug[] = [
     weather: Weather.ANY,
     time: [
       { start: 4, end: 9 }, // 4 AM to 9 AM
-      { start: 16, end: 9 } // 4 PM to 9 AM
+      { start: 16, end: 21 } // 4 PM to 9 PM
     ],
     months: {
       march: Month.ALL,
@@ -596,6 +596,174 @@ const fish: FishOrBug[] = [
       september: Month.ALL
     },
     wikiPage: 'Salmon#In_Animal_Crossing'
+  },
+  // 26
+  {
+    name: 'Goldfish',
+    icon: 'goldfish.png',
+    type: Creature.FISH,
+    price: 1300,
+    shadow: Shadow.TINY,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Goldfish#In_Animal_Crossing'
+  },
+  // 27
+  {
+    name: 'Popeyed goldfish',
+    icon: 'popeyed-goldfish.png',
+    type: Creature.FISH,
+    price: 1300,
+    shadow: Shadow.TINY,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 9, // 9 AM
+        end: 16 // 4 PM
+      }
+    ],
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Popeyed_goldfish#In_Animal_Crossing'
+  },
+  // 28
+  {
+    name: 'Guppy',
+    icon: 'guppy.png',
+    type: Creature.FISH,
+    price: 1300,
+    shadow: Shadow.TINY,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 9, // 9 AM
+        end: 16 // 4 PM
+      }
+    ],
+    months: {
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Guppy#In_Animal_Crossing'
+  },
+  // 29
+  {
+    name: 'Angelfish',
+    icon: 'angelfish.png',
+    type: Creature.FISH,
+    price: 3000,
+    shadow: Shadow.SMALL,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 16, // 4 PM
+        end: 9 // 9 AM
+      }
+    ],
+    months: {
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL
+    },
+    wikiPage: 'Angelfish#In_Animal_Crossing'
+  },
+  // 30
+  {
+    name: 'Piranha',
+    icon: 'piranha.png',
+    type: Creature.FISH,
+    price: 6500,
+    shadow: Shadow.SMALL,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      { start: 21, end: 4 }, // 9 PM to 4 AM
+      { start: 9, end: 16 } // 9 AM to 4 PM
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Piranha#In_Animal_Crossing'
+  },
+  // 31
+  {
+    name: 'Arowana',
+    icon: 'arowana.png',
+    type: Creature.FISH,
+    price: 10000,
+    shadow: Shadow.MEDIUM,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [
+      { start: 4, end: 9 }, // 4 AM to 9 AM
+      { start: 16, end: 21 } // 4 PM to 9 PM
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Arowana#In_Animal_Crossing'
+  },
+  // 32
+  {
+    name: 'Arapaima',
+    icon: 'arapaima.png',
+    type: Creature.FISH,
+    price: 10000,
+    shadow: Shadow.HUGE,
+    location: [Location.RIVER],
+    weather: Weather.ANY,
+    time: [{ start: 16, end: 9 }], // 4 PM to 9 AM
+    months: {
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Arapaima#In_Animal_Crossing'
   }
 ];
 
