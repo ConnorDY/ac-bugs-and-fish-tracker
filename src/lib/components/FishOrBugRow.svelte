@@ -1,0 +1,61 @@
+<script lang="ts">
+  import type { FishOrBug } from '$lib/types/fish-or-bug';
+  import type { Game } from '$lib/types/game';
+  import { renderKebabCaseValue, renderLocation, renderTime } from '$lib/utils/utils';
+  import Months from './Months.svelte';
+
+  interface Props {
+    game: Game;
+    num: number;
+    data: FishOrBug;
+  }
+
+  let { game, num, data }: Props = $props();
+  const iconPath = `/games/${game.path}/${data.type}/${data.icon}`;
+  const shadowIconPath = `/games/${game.path}/shadow/${data.shadow}.png`;
+</script>
+
+<tr class="fish-row border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+  <td class="fish-num px-3 py-2">{num}</td>
+
+  <td class="fish-caught px-3 py-2">
+    <input
+      type="checkbox"
+      class="h-6 w-6 rounded-sm border-gray-300 text-teal-600 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 checked:dark:bg-teal-600 dark:focus:ring-teal-600"
+    />
+  </td>
+
+  <td class="fish-name px-3 py-2">{data.name}</td>
+
+  <td class="fish-icon px-3 py-2"><img src={iconPath} alt={`${data.name} icon`} /></td>
+
+  <td class="fish-price px-3 py-2">{data.price}</td>
+
+  <td class="fish-shadow px-3 py-2">
+    <img src={shadowIconPath} alt="" aria-hidden={true} />
+    {renderKebabCaseValue(data.shadow!, true)}
+  </td>
+
+  <td class="fish-location px-3 py-2">
+    {renderLocation(data.location)}
+  </td>
+
+  <td class="fish-time px-3 py-2">
+    {renderTime(data.time)}
+  </td>
+
+  <td class="fish-months px-3 py-2">
+    <Months months={data.months} />
+  </td>
+</tr>
+
+<style lang="scss">
+  .fish-shadow {
+    display: flex;
+    align-items: center;
+
+    img {
+      mix-blend-mode: darken;
+    }
+  }
+</style>

@@ -45,6 +45,21 @@ export enum Month {
   ALL = 'all'
 }
 
+export interface Months {
+  january?: Month;
+  february?: Month;
+  march?: Month;
+  april?: Month;
+  may?: Month;
+  june?: Month;
+  july?: Month;
+  august?: Month;
+  september?: Month;
+  october?: Month;
+  november?: Month;
+  december?: Month;
+}
+
 export type TimeRange = {
   start: number; // start hour in 24-hour format
   end: number; // end hour in 24-hour format

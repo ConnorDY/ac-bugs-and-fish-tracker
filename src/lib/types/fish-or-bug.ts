@@ -1,4 +1,4 @@
-import type { Creature, Month, Location, Shadow, Time } from './shared';
+import type { Creature, Months, Location, Shadow, Time } from './shared';
 
 export interface FishOrBug {
   name: string;
@@ -12,18 +12,5 @@ export interface FishOrBug {
     noRain?: boolean; // only available when not raining
   };
   time: Time;
-  months: {
-    january?: Month;
-    february?: Month;
-    march?: Month;
-    april?: Month;
-    may?: Month;
-    june?: Month;
-    july?: Month;
-    august?: Month;
-    september?: Month;
-    october?: Month;
-    november?: Month;
-    december?: Month;
-  };
+  months: Months;
 }

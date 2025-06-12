@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+  import FishTable from '$lib/components/FishTable.svelte';
+  import { DoubutsuNoMoriEPlus } from '$lib/data/doubutsu-no-mori-eplus';
+</script>
+
+<FishTable game={DoubutsuNoMoriEPlus} />
