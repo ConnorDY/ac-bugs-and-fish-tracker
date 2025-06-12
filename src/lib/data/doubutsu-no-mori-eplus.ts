@@ -1,17 +1,12 @@
 /**
- * Doubutusu no Mori e+ (どうぶつの森 e+)
+ * Doubutsu no Mori e+ (どうぶつの森 e+)
  **/
 
-import {
-  Creature,
-  Location,
-  Month,
-  Shadow,
-  TimeOfDay,
-  type FishOrBug
-} from '$lib/types/fish-or-bug';
+import { type FishOrBug } from '$lib/types/fish-or-bug';
+import type { Game } from '$lib/types/game';
+import { Creature, Location, Month, Shadow, TimeOfDay } from '$lib/types/shared';
 
-export const fish: FishOrBug[] = [
+const fish: FishOrBug[] = [
   // 1
   {
     name: 'Crucian Carp',
@@ -255,7 +250,7 @@ export const fish: FishOrBug[] = [
   }
 ];
 
-export const bugs: FishOrBug[] = [
+const bugs: FishOrBug[] = [
   // 1
   {
     name: 'Common Butterfly',
@@ -336,3 +331,12 @@ export const bugs: FishOrBug[] = [
     }
   }
 ];
+
+export const DoubutsuNoMoriEPlus: Game = {
+  name: 'Doubutsu no Mori e+',
+  path: 'doubutsu-no-mori-eplus',
+  releaseDate: '2003-06-27',
+  languages: ['japanese'],
+  fish,
+  bugs
+};
