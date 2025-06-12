@@ -39,6 +39,23 @@ export enum Location {
   PUSHING_BALLS = 'pushing-balls'
 }
 
+export enum Weather {
+  ANY = 'any',
+  RAINING = 'raining', // only available when raining
+  NOT_RAINING = 'not-raining' // only available when not raining
+}
+
+export type TimeRange = {
+  start: number; // start hour in 24-hour format
+  end: number; // end hour in 24-hour format
+};
+
+export enum TimeOfDay {
+  ALL_DAY = 'all-day'
+}
+
+export type Time = TimeOfDay | TimeRange[];
+
 export enum Month {
   FIRST_HALF = 'first-half',
   SECOND_HALF = 'second-half',
@@ -59,14 +76,3 @@ export interface Months {
   november?: Month;
   december?: Month;
 }
-
-export type TimeRange = {
-  start: number; // start hour in 24-hour format
-  end: number; // end hour in 24-hour format
-};
-
-export enum TimeOfDay {
-  ALL_DAY = 'all-day'
-}
-
-export type Time = TimeOfDay | TimeRange[];

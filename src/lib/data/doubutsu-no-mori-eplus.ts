@@ -4,7 +4,7 @@
 
 import { type FishOrBug } from '$lib/types/fish-or-bug';
 import type { Game } from '$lib/types/game';
-import { Creature, Location, Month, Shadow, TimeOfDay } from '$lib/types/shared';
+import { Creature, Location, Month, Shadow, TimeOfDay, Weather } from '$lib/types/shared';
 
 const fish: FishOrBug[] = [
   // 1
@@ -15,6 +15,7 @@ const fish: FishOrBug[] = [
     price: 120,
     shadow: Shadow.SMALL,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -39,6 +40,7 @@ const fish: FishOrBug[] = [
     price: 150,
     shadow: Shadow.MEDIUM,
     location: [Location.LAKE],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -63,6 +65,7 @@ const fish: FishOrBug[] = [
     price: 300,
     shadow: Shadow.LARGE,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -87,6 +90,7 @@ const fish: FishOrBug[] = [
     price: 2000,
     shadow: Shadow.LARGE,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: [
       {
         start: 16, // 4 PM
@@ -116,6 +120,7 @@ const fish: FishOrBug[] = [
     price: 200,
     shadow: Shadow.LARGE,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -140,6 +145,7 @@ const fish: FishOrBug[] = [
     price: 200,
     shadow: Shadow.MEDIUM,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: [
       {
         start: 16, // 4 PM
@@ -169,6 +175,7 @@ const fish: FishOrBug[] = [
     price: 200,
     shadow: Shadow.LARGE,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: [
       {
         start: 16, // 4 PM
@@ -192,6 +199,7 @@ const fish: FishOrBug[] = [
     price: 3000,
     shadow: Shadow.VERY_LARGE,
     location: [Location.LAKE],
+    weather: Weather.ANY,
     time: [
       {
         start: 16, // 4 PM
@@ -212,6 +220,7 @@ const fish: FishOrBug[] = [
     price: 200,
     shadow: Shadow.SMALL,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: [
       {
         start: 9, // 9 AM
@@ -241,6 +250,7 @@ const fish: FishOrBug[] = [
     price: 1300,
     shadow: Shadow.TINY,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -256,6 +266,7 @@ const fish: FishOrBug[] = [
     price: 300,
     shadow: Shadow.TINY,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       march: Month.ALL,
@@ -271,6 +282,7 @@ const fish: FishOrBug[] = [
     price: 120,
     shadow: Shadow.SMALL,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: [
       {
         start: 9, // 9 AM
@@ -300,6 +312,7 @@ const fish: FishOrBug[] = [
     price: 200,
     shadow: Shadow.SMALL,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -324,6 +337,7 @@ const fish: FishOrBug[] = [
     price: 300,
     shadow: Shadow.MEDIUM,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -348,6 +362,7 @@ const fish: FishOrBug[] = [
     price: 3000,
     shadow: Shadow.LARGE,
     location: [Location.RIVER],
+    weather: Weather.ANY,
     time: TimeOfDay.ALL_DAY,
     months: {
       january: Month.ALL,
@@ -374,9 +389,7 @@ const bugs: FishOrBug[] = [
     type: Creature.BUG,
     price: 80,
     location: [Location.FLYING],
-    weather: {
-      noRain: true
-    },
+    weather: Weather.NOT_RAINING,
     time: [
       {
         start: 8, // 8 AM
@@ -401,9 +414,7 @@ const bugs: FishOrBug[] = [
     type: Creature.BUG,
     price: 80,
     location: [Location.FLYING],
-    weather: {
-      noRain: true
-    },
+    weather: Weather.NOT_RAINING,
     time: [
       {
         start: 8, // 8 AM
@@ -428,9 +439,7 @@ const bugs: FishOrBug[] = [
     type: Creature.BUG,
     price: 200,
     location: [Location.FLYING],
-    weather: {
-      noRain: true
-    },
+    weather: Weather.NOT_RAINING,
     time: [
       {
         start: 8, // 8 AM

@@ -1,4 +1,5 @@
 import type { Location, Time, TimeRange } from '$lib/types/shared';
+import { Weather } from '$lib/types/shared';
 
 export function capitalizeFirstLetter(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -34,4 +35,17 @@ export function renderTime(time: Time): string {
   return (time as TimeRange[])
     .map((t) => `${convert24HourTo12Hour(t.start)} – ${convert24HourTo12Hour(t.end)}`)
     .join(' ');
+}
+
+export function renderWeather(weather: Weather): string {
+  switch (weather) {
+    case Weather.ANY:
+      return '';
+
+    case Weather.RAINING:
+      return 'Rain only';
+
+    case Weather.NOT_RAINING:
+      return 'Any except rain';
+  }
 }
