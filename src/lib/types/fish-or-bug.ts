@@ -10,4 +10,5 @@ export interface FishOrBug {
   weather: Weather;
   time: Time;
   months: Months;
+  wikiPage?: string;
 }

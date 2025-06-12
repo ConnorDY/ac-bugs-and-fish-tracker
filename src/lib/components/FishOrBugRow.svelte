@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { wikiUrl } from '$lib/data/wiki';
   import type { FishOrBug } from '$lib/types/fish-or-bug';
   import type { Game } from '$lib/types/game';
   import {
@@ -33,7 +34,15 @@
     />
   </td>
 
-  <td class="creature-name px-3 py-2">{data.name}</td>
+  <td class="creature-name px-3 py-2">
+    {#if data.wikiPage}
+      <a href={`${wikiUrl}${data.wikiPage}`}>
+        {data.name}
+      </a>
+    {:else}
+      {data.name}
+    {/if}
+  </td>
 
   <td class="creature-icon px-3 py-2"><img src={iconPath} alt={`${data.name} icon`} /></td>
 

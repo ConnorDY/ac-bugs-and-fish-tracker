@@ -30,7 +30,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Crucian_carp#In_Animal_Crossing'
   },
   // 2
   {
@@ -55,7 +56,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Brook_trout#In_Animal_Crossing'
   },
   // 3
   {
@@ -80,7 +82,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Carp#In_Animal_Crossing'
   },
   // 4
   {
@@ -110,7 +113,8 @@ const fish: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: 'Koi#In_Animal_Crossing'
   },
   // 5
   {
@@ -405,7 +409,8 @@ const bugs: FishOrBug[] = [
       august: Month.ALL,
       september: Month.ALL,
       october: Month.ALL
-    }
+    },
+    wikiPage: 'Common_butterfly#In_Animal_Crossing'
   },
   // 2
   {
@@ -430,7 +435,8 @@ const bugs: FishOrBug[] = [
       august: Month.ALL,
       september: Month.ALL,
       october: Month.ALL
-    }
+    },
+    wikiPage: 'Yellow_butterfly#In_Animal_Crossing'
   },
   // 3
   {
@@ -453,7 +459,8 @@ const bugs: FishOrBug[] = [
       july: Month.ALL,
       august: Month.ALL,
       september: Month.ALL
-    }
+    },
+    wikiPage: 'Tiger_butterfly#In_Animal_Crossing'
   },
   // 4
   {
@@ -473,7 +480,8 @@ const bugs: FishOrBug[] = [
       june: Month.ALL,
       july: Month.ALL,
       august: Month.ALL
-    }
+    },
+    wikiPage: 'Great_purple_emperor#In_Animal_Crossing'
   },
   // 5
   {
@@ -502,7 +510,8 @@ const bugs: FishOrBug[] = [
       october: Month.ALL,
       november: Month.ALL,
       december: Month.ALL
-    }
+    },
+    wikiPage: "Queen_Alexandra's_birdwing#In_Doubutsu_no_Mori_e.2B"
   }
 ];
 
