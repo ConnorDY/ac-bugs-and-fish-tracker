@@ -69,7 +69,7 @@
   };
 </script>
 
-<label class="toggle-icon">
+<label class="toggle-icon flex">
   <input
     type="checkbox"
     checked={active}
@@ -84,7 +84,6 @@
 
 <style lang="scss">
   .toggle-icon {
-    display: flex;
     width: 32px;
     height: 32px;
   }

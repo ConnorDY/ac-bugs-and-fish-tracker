@@ -2,7 +2,7 @@
   import type { Filters } from '$lib/types/filters';
   import type { FishOrBugWithNum } from '$lib/types/fish-or-bug';
   import type { Game } from '$lib/types/game';
-  import { getCaughtFishAndBugs } from '$lib/utils/save-data.svelte';
+  import { getCaughtFishAndBugs, getDonatedFishAndBugs } from '$lib/utils/save-data.svelte';
   import FishOrBugRow from './FishOrBugRow.svelte';
 
   interface Props {
@@ -11,6 +11,7 @@
   }
   let { game, filters }: Props = $props();
 
+  // add a number to each bug
   const bugsWithNum = $state<FishOrBugWithNum[]>(
     game.bugs.map((bug, index) => ({
       ...bug,
@@ -20,12 +21,17 @@
   let filteredBugs = $state([...bugsWithNum]);
 
   $effect(() => {
-    if (filters.notCaught) {
-      const caughtFishAndBugs = getCaughtFishAndBugs(game);
-      filteredBugs = [...bugsWithNum.filter((bug) => !caughtFishAndBugs.includes(bug.name))];
-    } else {
-      filteredBugs = [...bugsWithNum];
-    }
+    const caughtFishAndBugs = getCaughtFishAndBugs(game);
+    const donatedFishAndBugs = getDonatedFishAndBugs(game);
+
+    filteredBugs = [
+      ...bugsWithNum.filter((bug) => {
+        if (filters.notCaught && caughtFishAndBugs.includes(bug.name)) return false;
+        if (filters.notDonated && donatedFishAndBugs.includes(bug.name)) return false;
+
+        return true;
+      })
+    ];
   });
 </script>
 

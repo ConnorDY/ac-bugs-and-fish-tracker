@@ -67,3 +67,12 @@ export function getCaughtFishAndBugs(game: Game): string[] {
     .filter(([, data]) => data.caught)
     .map(([name]) => name);
 }
+
+/** Gets a list of all donated fish and bugs for a game */
+export function getDonatedFishAndBugs(game: Game): string[] {
+  const fishOrBugData = saveData.games[game.name] || {};
+
+  return Object.entries(fishOrBugData)
+    .filter(([, data]) => data.donated)
+    .map(([name]) => name);
+}

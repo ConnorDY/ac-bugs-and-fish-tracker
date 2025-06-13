@@ -1,16 +1,19 @@
-<script>
+<script lang="ts">
   import BugTable from '$lib/components/BugTable.svelte';
   import FishTable from '$lib/components/FishTable.svelte';
   import { DoubutsuNoMoriEPlus } from '$lib/data/doubutsu-no-mori-eplus';
   import { wikiUrl } from '$lib/data/wiki';
+  import type { Filters } from '$lib/types/filters';
   import { dataLoaded, loadSaveData } from '$lib/utils/save-data.svelte';
 
   import { onMount } from 'svelte';
 
   let notCaught = $state(false);
+  let notDonated = $state(false);
 
-  let filters = $derived({
-    notCaught
+  let filters = $derived<Filters>({
+    notCaught,
+    notDonated
   });
 
   onMount(() => {
@@ -21,7 +24,7 @@
 {#if dataLoaded.loaded}
   <h2 class="px-4 py-4 text-4xl font-extrabold dark:text-white">Filters</h2>
 
-  <div class="px-4 py-4">
+  <div class="filters flex gap-6 px-4 py-4">
     <label class="flex items-center gap-2">
       <input
         type="checkbox"
@@ -29,6 +32,15 @@
         class="h-5 w-5 rounded-sm border-gray-300 text-teal-600 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 checked:dark:bg-teal-600 dark:focus:ring-teal-600"
       />
       <span class="dark:text-white">Not caught?</span>
+    </label>
+
+    <label class="flex items-center gap-2">
+      <input
+        type="checkbox"
+        bind:checked={notDonated}
+        class="h-5 w-5 rounded-sm border-gray-300 text-teal-600 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 checked:dark:bg-teal-600 dark:focus:ring-teal-600"
+      />
+      <span class="dark:text-white">Not donated?</span>
     </label>
   </div>
 

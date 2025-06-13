@@ -54,7 +54,7 @@
   <td class="creature-icon px-3 py-2"><img src={iconPath} alt={`${data.name} icon`} /></td>
 
   <td class="creature-price px-3 py-2">
-    <div>
+    <div class="flex items-center gap-1">
       <img src="/icons/bells.png" alt="Bells icon" />
       <span>{data.price.toLocaleString()} bells</span>
     </div>
@@ -62,7 +62,7 @@
 
   {#if isFish}
     <td class="fish-shadow px-3 py-2">
-      <div>
+      <div class="flex items-center">
         <img src={shadowIconPath} alt="" aria-hidden={true} />
         <span>{renderKebabCaseValue(data.shadow!, true)}</span>
       </div>
@@ -99,18 +99,7 @@
     background-color: var(--color-gray-900);
   }
 
-  .creature-price > div {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .fish-shadow > div {
-    display: flex;
-    align-items: center;
-
-    img {
-      mix-blend-mode: darken;
-    }
+  .fish-shadow img {
+    mix-blend-mode: darken;
   }
 </style>

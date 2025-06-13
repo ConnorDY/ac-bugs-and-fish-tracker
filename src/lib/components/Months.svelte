@@ -34,7 +34,7 @@
   };
 </script>
 
-<div class="months">
+<div class="months flex gap-2">
   {#each monthList as month}
     <span
       class="month"
@@ -48,11 +48,6 @@
 </div>
 
 <style lang="scss">
-  .months {
-    display: flex;
-    gap: 5px;
-  }
-
   .month.active {
     color: var(--color-teal-600);
   }

@@ -1,3 +1,4 @@
 export interface Filters {
-  notCaught?: boolean;
+  notCaught: boolean;
+  notDonated: boolean;
 }
