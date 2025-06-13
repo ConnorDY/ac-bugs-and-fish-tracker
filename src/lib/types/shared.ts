@@ -30,7 +30,7 @@ export enum Location {
   IN_BUSHES = 'in-bushes',
   ON_THE_GROUND = 'on-the-ground',
   ON_TREES = 'on-trees',
-  ON_NON_PALM_TREES = 'on-non-palm-trees',
+  ON_NON_PALM_TREES = 'on-non_palm-trees',
   IN_TREES = 'in-trees',
   ON_VILLAGERS = 'on-villagers',
   UNDERGROUND = 'underground',

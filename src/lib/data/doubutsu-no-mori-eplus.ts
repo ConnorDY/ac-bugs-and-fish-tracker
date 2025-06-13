@@ -1667,6 +1667,152 @@ const bugs: FishOrBug[] = [
       june: Month.ALL
     },
     wikiPage: 'Firefly#In_Animal_Crossing'
+  },
+  // 25
+  {
+    name: 'Longhorn beetle',
+    altName: ['Citrus long-horned beetle'],
+    icon: 'longhorn-beetle.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Citrus_long-horned_beetle#In_Animal_Crossing'
+  },
+  // 26
+  {
+    name: 'Jewel beetle',
+    icon: 'jewel-beetle.png',
+    type: Creature.BUG,
+    price: 3000,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      { start: 8, end: 16 } // 8 AM – 4 PM
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Jewel_beetle#In_Animal_Crossing'
+  },
+  // 27
+  {
+    name: 'Dynastid beetle',
+    icon: 'dynastid-beetle.png',
+    type: Creature.BUG,
+    price: 1350,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      { start: 19, end: 8 } // 7 PM – 8 AM
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Horned_dynastid#In_Animal_Crossing'
+  },
+  // 28
+  {
+    name: 'Hercules beetle',
+    altName: ['Horned hercules'],
+    icon: 'hercules-beetle.png',
+    type: Creature.BUG,
+    price: 11250,
+    location: [Location.ON_NON_PALM_TREES],
+    weather: Weather.ANY,
+    time: [
+      { start: 23, end: 8 } // 11 PM – 8 AM
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Horned_hercules#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 29
+  {
+    name: 'Flat stag beetle',
+    icon: 'flat-stag-beetle.png',
+    type: Creature.BUG,
+    price: 2000,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      { start: 19, end: 8 } // 7 PM – 8 AM
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Stag_beetle#In_Animal_Crossing'
+  },
+  // 30
+  {
+    name: 'Saw stag beetle',
+    altName: ['Saw stag'],
+    icon: 'saw-stag-beetle.png',
+    type: Creature.BUG,
+    price: 2000,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      { start: 19, end: 8 } // 7 PM – 8 AM
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Saw_stag#In_Animal_Crossing'
+  },
+  // 31
+  {
+    name: 'Mountain beetle',
+    altName: ['Miyama stag'],
+    icon: 'mountain-beetle.png',
+    type: Creature.BUG,
+    price: 2000,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      { start: 19, end: 8 } // 7 PM – 8 AM
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Miyama_stag#In_Animal_Crossing'
+  },
+  // 32
+  {
+    name: 'Giant beetle',
+    altName: ['Giant stag'],
+    icon: 'giant-beetle.png',
+    type: Creature.BUG,
+    price: 10000,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      { start: 23, end: 8 } // 11 PM – 8 AM
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Giant_stag#In_Animal_Crossing'
   }
 ];
 
