@@ -1501,6 +1501,172 @@ const bugs: FishOrBug[] = [
       august: Month.ALL
     },
     wikiPage: 'Evening_cicada#In_Animal_Crossing'
+  },
+  // 17
+  {
+    name: 'Cricket',
+    icon: 'cricket.png',
+    type: Creature.BUG,
+    price: 130,
+    location: [Location.IN_BUSHES],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 17, // 5 PM
+        end: 8 // 8 AM
+      }
+    ],
+    months: {
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Cricket#In_Animal_Crossing'
+  },
+  // 18
+  {
+    name: 'Grasshopper',
+    icon: 'grasshopper.png',
+    type: Creature.BUG,
+    price: 130,
+    location: [Location.IN_BUSHES],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Grasshopper#In_Animal_Crossing'
+  },
+  // 19
+  {
+    name: 'Pine cricket',
+    icon: 'pine-cricket.png',
+    type: Creature.BUG,
+    price: 100,
+    location: [Location.IN_BUSHES],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 17, // 5 PM
+        end: 8 // 8 AM
+      }
+    ],
+    months: {
+      september: Month.ALL,
+      october: Month.ALL
+    },
+    wikiPage: 'Pine_cricket#In_Animal_Crossing'
+  },
+  // 20
+  {
+    name: 'Bell cricket',
+    icon: 'bell-cricket.png',
+    type: Creature.BUG,
+    price: 430,
+    location: [Location.IN_BUSHES],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 17, // 5 PM
+        end: 8 // 8 AM
+      }
+    ],
+    months: {
+      september: Month.ALL,
+      october: Month.ALL
+    },
+    wikiPage: 'Bell_cricket#In_Animal_Crossing'
+  },
+  // 21
+  {
+    name: 'Ladybug',
+    icon: 'ladybug.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.ON_FLOWERS],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      // ...
+      october: Month.ALL
+    },
+    wikiPage: 'Ladybug_(Animal_Crossing)#In_Animal_Crossing'
+  },
+  // 22
+  {
+    name: 'Spotted ladybug',
+    altName: ['Ladybug'],
+    icon: 'spotted-ladybug.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.ON_FLOWERS],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      // ...
+      october: Month.ALL
+    },
+    wikiPage: 'Ladybug#In_Animal_Crossing'
+  },
+  // 23
+  {
+    name: 'Drone beetle',
+    icon: 'drone-beetle.png',
+    type: Creature.BUG,
+    price: 80,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Drone_beetle#In_Animal_Crossing'
+  },
+  // 24
+  {
+    name: 'Firefly',
+    icon: 'firefly.png',
+    type: Creature.BUG,
+    price: 250,
+    location: [Location.FLYING_NEAR_WATER],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 19, // 7 PM
+        end: 4 // 4 AM
+      }
+    ],
+    months: {
+      june: Month.ALL
+    },
+    wikiPage: 'Firefly#In_Animal_Crossing'
   }
 ];
 
