@@ -1,5 +1,5 @@
-import type { Location, Time, TimeRange } from '$lib/types/shared';
-import { Weather } from '$lib/types/shared';
+import type { Time, TimeRange } from '$lib/types/shared';
+import { Location, Weather } from '$lib/types/shared';
 
 export function capitalizeFirstLetter(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -20,7 +20,19 @@ export function renderLocation(location: Location[] | string): string {
     return renderKebabCaseValue(location);
   }
 
-  return (location as Location[]).map((loc) => renderKebabCaseValue(loc)).join(' ');
+  return (location as Location[])
+    .map((loc) => {
+      if (loc === Location.ANIMAL_ISLAND) {
+        return renderKebabCaseValue(loc, true);
+      }
+
+      if (loc === Location.RIVER_MOUTH) {
+        return 'River (mouth)';
+      }
+
+      return renderKebabCaseValue(loc);
+    })
+    .join(' ');
 }
 
 export function convert24HourTo12Hour(hour: number): string {
@@ -42,7 +54,7 @@ export function renderTime(time: Time): string {
 export function renderWeather(weather: Weather): string {
   switch (weather) {
     case Weather.ANY:
-      return '';
+      return 'Any';
 
     case Weather.RAINING:
       return 'Rain only';

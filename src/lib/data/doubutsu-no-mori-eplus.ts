@@ -1269,6 +1269,238 @@ const bugs: FishOrBug[] = [
       december: Month.ALL
     },
     wikiPage: "Queen_Alexandra's_birdwing#In_Doubutsu_no_Mori_e.2B"
+  },
+  // 6
+  {
+    name: 'Mantis',
+    icon: 'mantis.png',
+    type: Creature.BUG,
+    price: 430,
+    location: [Location.ON_FLOWERS],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL
+    },
+    wikiPage: 'Mantis#In_Animal_Crossing'
+  },
+  // 7
+  {
+    name: 'Long locust',
+    icon: 'long-locust.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.IN_BUSHES],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Long_locust#In_Animal_Crossing'
+  },
+  // 8
+  {
+    name: 'Migratory locust',
+    icon: 'migratory-locust.png',
+    type: Creature.BUG,
+    price: 1350,
+    location: [Location.ON_THE_GROUND],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Migratory_locust#In_Animal_Crossing'
+  },
+  // 9
+  {
+    name: 'Red dragonfly',
+    icon: 'red-dragonfly.png',
+    type: Creature.BUG,
+    price: 80,
+    location: [Location.FLYING],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 19 // 7 PM
+      }
+    ],
+    months: {
+      september: Month.ALL,
+      october: Month.ALL
+    },
+    wikiPage: 'Red_dragonfly#In_Animal_Crossing'
+  },
+  // 10
+  {
+    name: 'Common dragonfly',
+    altName: ['Greater blue skimmer', 'White-tailed skimmer'],
+    icon: 'common-dragonfly.png',
+    type: Creature.BUG,
+    price: 130,
+    location: [Location.FLYING],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL
+    },
+    wikiPage: 'Greater_blue_skimmer#In_Animal_Crossing'
+  },
+  // 11
+  {
+    name: 'Darner dragonfly',
+    icon: 'darner-dragonfly.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.FLYING],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Darner_dragonfly#In_Animal_Crossing'
+  },
+  // 12
+  {
+    name: 'Banded dragonfly',
+    icon: 'banded-dragonfly.png',
+    type: Creature.BUG,
+    price: 450,
+    location: [Location.FLYING],
+    weather: Weather.NOT_RAINING,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Banded_dragonfly#In_Animal_Crossing'
+  },
+  // 13
+  {
+    name: 'Brown cicada',
+    icon: 'brown-cicada.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 17 // 5 PM
+      }
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Brown_cicada#In_Animal_Crossing'
+  },
+  // 14
+  {
+    name: 'Robust cicada',
+    icon: 'robust-cicada.png',
+    type: Creature.BUG,
+    price: 300,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 16 // 4 PM
+      }
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Robust_cicada#In_Animal_Crossing'
+  },
+  // 15
+  {
+    name: 'Walker cicada',
+    icon: 'walker-cicada.png',
+    type: Creature.BUG,
+    price: 400,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 8, // 8 AM
+        end: 16 // 4 PM
+      }
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Walker_cicada#In_Animal_Crossing'
+  },
+  // 16
+  {
+    name: 'Evening cicada',
+    icon: 'evening-cicada.png',
+    type: Creature.BUG,
+    price: 850,
+    location: [Location.ON_TREES],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 4, // 4 AM,
+        end: 8 // 8 AM
+      },
+      {
+        start: 16, // 4 PM
+        end: 19 // 7 PM
+      }
+    ],
+    months: {
+      july: Month.ALL,
+      august: Month.ALL
+    },
+    wikiPage: 'Evening_cicada#In_Animal_Crossing'
   }
 ];
 
