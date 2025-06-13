@@ -1813,6 +1813,176 @@ const bugs: FishOrBug[] = [
       august: Month.ALL
     },
     wikiPage: 'Giant_stag#In_Animal_Crossing'
+  },
+  // 33
+  {
+    name: 'Mole cricket',
+    icon: 'mole-cricket.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.UNDERGROUND],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      // ...
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Mole_cricket#In_Animal_Crossing'
+  },
+  // 34
+  {
+    name: 'Snail',
+    icon: 'snail.png',
+    type: Creature.BUG,
+    price: 250,
+    location: [Location.ON_FLOWERS],
+    weather: Weather.RAINING,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Snail#In_Animal_Crossing'
+  },
+  // 35
+  {
+    name: 'Pill bug',
+    icon: 'pill-bug.png',
+    type: Creature.BUG,
+    price: 250,
+    location: [Location.UNDER_ROCKS],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Pill_bug#In_Animal_Crossing'
+  },
+  // 36
+  {
+    name: 'Spider',
+    icon: 'spider.png',
+    type: Creature.BUG,
+    price: 300,
+    location: [Location.IN_TREES],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Spider#In_Animal_Crossing'
+  },
+  // 37
+  {
+    name: 'Bagworm',
+    icon: 'bagworm.png',
+    type: Creature.BUG,
+    price: 250,
+    location: [Location.IN_TREES],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      // ...
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Bagworm#In_Animal_Crossing'
+  },
+  // 38
+  {
+    name: 'Flea',
+    icon: 'flea.png',
+    type: Creature.BUG,
+    price: 70,
+    location: [Location.ON_VILLAGERS],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Flea#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 39
+  {
+    name: 'Mosquito',
+    icon: 'mosquito.png',
+    type: Creature.BUG,
+    price: 130,
+    location: [Location.FLYING],
+    weather: Weather.ANY,
+    time: [{ start: 17, end: 23 }], // 5 PM – 11 PM
+    months: {
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Mosquito#In_Animal_Crossing'
+  },
+  // 40
+  {
+    name: 'Bee',
+    altName: ['Wasp'],
+    icon: 'bee.png',
+    type: Creature.BUG,
+    price: 4500,
+    location: [Location.IN_TREES],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Wasp#In_Animal_Crossing'
   }
 ];
 
