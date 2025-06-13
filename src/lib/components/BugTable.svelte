@@ -2,6 +2,7 @@
   import type { Filters } from '$lib/types/filters';
   import type { FishOrBugWithNum } from '$lib/types/fish-or-bug';
   import type { Game } from '$lib/types/game';
+  import { filterFishOrBug } from '$lib/utils/filters';
   import { getCaughtFishAndBugs, getDonatedFishAndBugs } from '$lib/utils/save-data.svelte';
   import FishOrBugRow from './FishOrBugRow.svelte';
 
@@ -25,12 +26,9 @@
     const donatedFishAndBugs = getDonatedFishAndBugs(game);
 
     filteredBugs = [
-      ...bugsWithNum.filter((bug) => {
-        if (filters.notCaught && caughtFishAndBugs.includes(bug.name)) return false;
-        if (filters.notDonated && donatedFishAndBugs.includes(bug.name)) return false;
-
-        return true;
-      })
+      ...bugsWithNum.filter((bug) =>
+        filterFishOrBug(bug, filters, caughtFishAndBugs, donatedFishAndBugs)
+      )
     ];
   });
 </script>

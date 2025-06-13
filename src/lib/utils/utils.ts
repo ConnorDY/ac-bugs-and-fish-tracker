@@ -57,9 +57,22 @@ export function renderWeather(weather: Weather): string {
       return 'Any';
 
     case Weather.RAINING:
-      return 'Rain only';
+      return 'Raining';
 
     case Weather.NOT_RAINING:
       return 'Any except rain';
+  }
+}
+
+export function renderWeatherFilterOption(weather: Weather): string {
+  switch (weather) {
+    case Weather.ANY:
+      return 'Any';
+
+    case Weather.RAINING:
+      return 'Raining';
+
+    case Weather.NOT_RAINING:
+      return 'Not raining';
   }
 }
