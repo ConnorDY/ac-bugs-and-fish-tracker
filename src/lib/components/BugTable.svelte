@@ -5,7 +5,6 @@
   interface Props {
     game: Game;
   }
-
   let { game }: Props = $props();
 </script>
 

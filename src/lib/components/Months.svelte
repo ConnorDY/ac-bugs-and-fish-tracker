@@ -4,7 +4,6 @@
   interface Props {
     months: Months;
   }
-
   let { months }: Props = $props();
 
   const monthList = [
