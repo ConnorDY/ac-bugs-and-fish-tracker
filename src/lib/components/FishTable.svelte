@@ -55,3 +55,11 @@
     {/each}
   </tbody>
 </table>
+
+<style lang="scss">
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+</style>
