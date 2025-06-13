@@ -12,7 +12,7 @@
   }
   let { game, fishOrBug, type }: Props = $props();
 
-  const iconPath = `/games/${game.path}/other/`;
+  const iconPath = `games/${game.path}/other/`;
 
   const getInitialState = (): boolean => {
     const data = getFishOrBugData(game, fishOrBug);

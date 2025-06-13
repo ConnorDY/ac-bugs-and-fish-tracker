@@ -19,8 +19,8 @@
   }
   let { game, data }: Props = $props();
 
-  const iconPath = `/games/${game.path}/${data.type}/${data.icon}`;
-  const shadowIconPath = `/games/${game.path}/shadow/${data.shadow}.png`;
+  const iconPath = `games/${game.path}/${data.type}/${data.icon}`;
+  const shadowIconPath = `games/${game.path}/shadow/${data.shadow}.png`;
 
   const isFish = data.type === 'fish';
   const isBug = data.type === 'bug';
@@ -55,7 +55,7 @@
 
   <td class="creature-price px-3 py-2">
     <div class="flex items-center gap-1">
-      <img src="/icons/bells.png" alt="Bells icon" />
+      <img src="icons/bells.png" alt="Bells icon" />
       <span>{data.price.toLocaleString()} bells</span>
     </div>
   </td>
