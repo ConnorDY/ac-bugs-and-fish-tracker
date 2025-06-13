@@ -1,7 +1,7 @@
 <script lang="ts">
   import { wikiUrl } from '$lib/data/wiki';
   import { CaughtOrDonatedIcon } from '$lib/types/caught-or-donated-icon';
-  import type { FishOrBug } from '$lib/types/fish-or-bug';
+  import type { FishOrBugWithNum } from '$lib/types/fish-or-bug';
   import type { Game } from '$lib/types/game';
   import { Weather } from '$lib/types/shared';
   import {
@@ -15,10 +15,9 @@
 
   interface Props {
     game: Game;
-    num: number;
-    data: FishOrBug;
+    data: FishOrBugWithNum;
   }
-  let { game, num, data }: Props = $props();
+  let { game, data }: Props = $props();
 
   const iconPath = `/games/${game.path}/${data.type}/${data.icon}`;
   const shadowIconPath = `/games/${game.path}/shadow/${data.shadow}.png`;
@@ -28,15 +27,9 @@
 </script>
 
 <tr class="creature-row border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
-  <td class="creature-num px-3 py-2">{num}</td>
+  <td class="creature-num px-3 py-2">{data.num}</td>
 
   <td class="creature-caught px-3 py-2">
-    <!--
-    <input
-      type="checkbox"
-      class="h-6 w-6 rounded-sm border-gray-300 text-teal-600 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 checked:dark:bg-teal-600 dark:focus:ring-teal-600"
-    />
-    -->
     <ToggleIcon
       {game}
       fishOrBug={data}

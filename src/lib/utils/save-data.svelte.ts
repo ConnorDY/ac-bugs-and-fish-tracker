@@ -58,3 +58,12 @@ export function updateFishOrBugData(
   // update local storage
   saveSaveData();
 }
+
+/** Gets a list of all caught fish and bugs for a game */
+export function getCaughtFishAndBugs(game: Game): string[] {
+  const fishOrBugData = saveData.games[game.name] || {};
+
+  return Object.entries(fishOrBugData)
+    .filter(([, data]) => data.caught)
+    .map(([name]) => name);
+}

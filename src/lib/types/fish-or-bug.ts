@@ -13,3 +13,7 @@ export interface FishOrBug {
   months: Months;
   wikiPage?: string;
 }
+
+export interface FishOrBugWithNum extends FishOrBug {
+  num: number; // index of the fish or bug in the list
+}

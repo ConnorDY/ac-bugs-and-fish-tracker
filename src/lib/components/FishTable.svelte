@@ -1,11 +1,32 @@
 <script lang="ts">
+  import type { Filters } from '$lib/types/filters';
+  import type { FishOrBugWithNum } from '$lib/types/fish-or-bug';
   import type { Game } from '$lib/types/game';
+  import { getCaughtFishAndBugs } from '$lib/utils/save-data.svelte';
   import FishOrBugRow from './FishOrBugRow.svelte';
 
   interface Props {
     game: Game;
+    filters: Filters;
   }
-  let { game }: Props = $props();
+  let { game, filters }: Props = $props();
+
+  const fishWithNum = $state<FishOrBugWithNum[]>(
+    game.fish.map((fish, index) => ({
+      ...fish,
+      num: index + 1
+    }))
+  );
+  let filteredFish = $state([...fishWithNum]);
+
+  $effect(() => {
+    if (filters.notCaught) {
+      const caughtFishAndBugs = getCaughtFishAndBugs(game);
+      filteredFish = [...fishWithNum.filter((fish) => !caughtFishAndBugs.includes(fish.name))];
+    } else {
+      filteredFish = [...fishWithNum];
+    }
+  });
 </script>
 
 <table class="dark:test-gray-400 w-full text-left text-sm text-gray-400 rtl:text-right">
@@ -25,8 +46,8 @@
   </thead>
 
   <tbody>
-    {#each game.fish as fish, index}
-      <FishOrBugRow {game} num={index + 1} data={fish} />
+    {#each filteredFish as fish (fish.name)}
+      <FishOrBugRow {game} data={fish} />
     {/each}
   </tbody>
 </table>
