@@ -33,8 +33,8 @@
   });
 </script>
 
-<table class="dark:test-gray-400 w-full text-left text-sm text-gray-400 rtl:text-right">
-  <thead class="bg-gray-50 text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+<table class="dark:test-gray-400 w-full text-left text-sm text-gray-300 rtl:text-right">
+  <thead class="bg-gray-50 text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-300">
     <tr>
       <th class="px-3 py-3">#</th>
       <th class="px-3 py-3">Caught?</th>
