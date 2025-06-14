@@ -29,7 +29,7 @@
 </script>
 
 <Button onclick={() => (hidden = false)} class="filter-panel-button">
-  <FilterSolid class="h-5 w-5" />
+  <FilterSolid class="h-5 w-5" aria-hidden={true} />
   <span class="sr-only">Filters</span>
 </Button>
 

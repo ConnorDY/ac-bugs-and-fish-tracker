@@ -9,3 +9,9 @@
 >
   {@render children()}
 </button>
+
+<style lang="scss">
+  button {
+    cursor: pointer;
+  }
+</style>

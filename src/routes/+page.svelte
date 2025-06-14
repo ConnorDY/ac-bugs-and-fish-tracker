@@ -24,7 +24,7 @@
     </h2>
 
     <a href="#bugs-table">
-      <ArrowDownOutline size="xl" color="var(--color-teal-600)" />
+      <ArrowDownOutline size="xl" color="var(--color-teal-600)" aria-hidden={true} />
       <span class="sr-only">Jump to Bugs table</span>
     </a>
   </div>
@@ -37,7 +37,7 @@
     </h2>
 
     <a href="#fish-table">
-      <ArrowUpOutline size="xl" color="var(--color-teal-600)" />
+      <ArrowUpOutline size="xl" color="var(--color-teal-600)" aria-hidden={true} />
       <span class="sr-only">Jump to Fish table</span>
     </a>
   </div>
