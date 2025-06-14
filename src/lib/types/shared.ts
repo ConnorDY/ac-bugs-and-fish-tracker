@@ -36,13 +36,20 @@ export enum Location {
   UNDERGROUND = 'underground',
   UNDER_ROCKS = 'under-rocks',
   ON_THE_BEACH = 'on-the-beach',
-  PUSHING_BALLS = 'pushing-balls'
+  PUSHING_BALLS = 'pushing-balls',
+  ON_FRESHWATER = 'on-freshwater',
+  ON_THE_LAKE = 'on-the-lake',
+  ON_PONDS = 'on-ponds',
+  ON_FRUITLESS_PALM_TREES_NOT_ON_ANIMAL_ISLAND = 'on-fruitless-palm-trees-not-on-animal-island',
+  ON_CANDY = 'on-candy',
+  ON_SPOILED_TURNIPS = 'on-spoiled-turnips'
 }
 
 export enum Weather {
   ANY = 'any',
   RAINING = 'raining', // only available when raining
-  NOT_RAINING = 'not-raining' // only available when not raining
+  NOT_RAINING = 'not-raining', // only available when not raining,
+  OTHER = 'other'
 }
 
 export type TimeRange = {

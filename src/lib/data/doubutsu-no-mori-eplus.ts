@@ -1983,6 +1983,185 @@ const bugs: FishOrBug[] = [
       december: Month.ALL
     },
     wikiPage: 'Wasp#In_Animal_Crossing'
+  },
+  // 41
+  {
+    name: 'Pond skater',
+    altName: ['Pondskater'],
+    icon: 'pond-skater.png',
+    type: Creature.BUG,
+    price: 130,
+    location: [Location.ON_THE_LAKE, Location.ON_PONDS],
+    weather: Weather.ANY,
+    time: [{ start: 8, end: 19 }], // 8 AM – 7 PM
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Pondskater#In_Animal_Crossing'
+  },
+  // 42
+  {
+    name: 'Diving beetle',
+    icon: 'diving-beetle.png',
+    type: Creature.BUG,
+    price: 250,
+    location: [Location.ON_FRESHWATER],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Diving_beetle#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 43
+  {
+    name: 'Crab',
+    icon: 'crab.png',
+    type: Creature.BUG,
+    price: 150,
+    location: [Location.ON_THE_BEACH],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Crab#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 44
+  {
+    name: 'Hermit crab',
+    icon: 'hermit-crab.png',
+    type: Creature.BUG,
+    price: 200,
+    location: [Location.ON_THE_BEACH],
+    weather: Weather.ANY,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Hermit_crab#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 45
+  {
+    name: 'Coconut crab',
+    icon: 'coconut-crab.png',
+    type: Creature.BUG,
+    price: 300,
+    location: [Location.ON_FRUITLESS_PALM_TREES_NOT_ON_ANIMAL_ISLAND],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 19, // 7 PM
+        end: 8 // 8 AM
+      }
+    ],
+    months: {
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL
+    },
+    wikiPage: 'Coconut_crab#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 46
+  {
+    name: 'Ant',
+    icon: 'ant.png',
+    type: Creature.BUG,
+    price: 80,
+    location: [Location.ON_CANDY, Location.ON_SPOILED_TURNIPS],
+    weather: Weather.NOT_RAINING,
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      january: Month.ALL,
+      february: Month.ALL,
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL,
+      december: Month.ALL
+    },
+    wikiPage: 'Ant#In_Animal_Crossing'
+  },
+  // 47
+  {
+    name: 'Dung beetle',
+    icon: 'dung-beetle.png',
+    type: Creature.BUG,
+    price: 400,
+    location: [Location.PUSHING_BALLS],
+    weather: Weather.ANY,
+    time: [
+      {
+        start: 19, // 7 PM
+        end: 8 // 8 AM
+      }
+    ],
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL
+    },
+    wikiPage: 'Dung_beetle#In_Doubutsu_no_Mori_e.2B'
+  },
+  // 48
+  {
+    name: 'Cockroach',
+    icon: 'cockroach.png',
+    type: Creature.BUG,
+    price: 5,
+    location: [Location.ON_TREES, Location.ON_FLOWERS, Location.ON_SPOILED_TURNIPS],
+    weather: Weather.OTHER, // dependent on the location
+    time: TimeOfDay.ALL_DAY,
+    months: {
+      march: Month.ALL,
+      april: Month.ALL,
+      may: Month.ALL,
+      june: Month.ALL,
+      july: Month.ALL,
+      august: Month.ALL,
+      september: Month.ALL,
+      october: Month.ALL,
+      november: Month.ALL
+    },
+    wikiPage: 'Cockroach#In_Animal_Crossing'
   }
 ];
 

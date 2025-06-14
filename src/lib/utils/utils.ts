@@ -1,3 +1,4 @@
+import type { FishOrBug } from '$lib/types/fish-or-bug';
 import type { Time, TimeRange } from '$lib/types/shared';
 import { Location, Weather } from '$lib/types/shared';
 
@@ -15,24 +16,20 @@ export function renderKebabCaseValue(str: string, capitalizeEach = false): strin
   return renderedWords.replaceAll('_', '-'); // Replace underscores with hyphens
 }
 
-export function renderLocation(location: Location[] | string): string {
-  if (typeof location === 'string') {
-    return renderKebabCaseValue(location);
+export function renderLocation(location: Location): string {
+  switch (location) {
+    case Location.ANIMAL_ISLAND:
+      return renderKebabCaseValue(location, true);
+
+    case Location.ON_FRUITLESS_PALM_TREES_NOT_ON_ANIMAL_ISLAND:
+      return 'On fruitless palm trees (not on Animal Island)';
+
+    case Location.RIVER_MOUTH:
+      return 'River (mouth)';
+
+    default:
+      return renderKebabCaseValue(location);
   }
-
-  return (location as Location[])
-    .map((loc) => {
-      if (loc === Location.ANIMAL_ISLAND) {
-        return renderKebabCaseValue(loc, true);
-      }
-
-      if (loc === Location.RIVER_MOUTH) {
-        return 'River (mouth)';
-      }
-
-      return renderKebabCaseValue(loc);
-    })
-    .join(' ');
 }
 
 export function convert24HourTo12Hour(hour: number): string {
@@ -51,7 +48,7 @@ export function renderTime(time: Time): string {
     .join('; ');
 }
 
-export function renderWeather(weather: Weather): string {
+export function renderWeather(weather: Weather, fishOrBugName: string): string {
   switch (weather) {
     case Weather.ANY:
       return 'Any';
@@ -61,6 +58,19 @@ export function renderWeather(weather: Weather): string {
 
     case Weather.NOT_RAINING:
       return 'Any except rain';
+
+    case Weather.OTHER:
+      if (fishOrBugName === 'Cockroach') {
+        return (
+          '<div>On trees: Any weather</div>' +
+          '<div>On flowers/spoiled turnips: Any except rain</div>'
+        );
+      }
+
+      throw new Error(`Weather 'Other' is not supported for ${fishOrBugName}.`);
+
+    default:
+      throw new Error(`Unknown weather type: ${weather}`);
   }
 }
 
@@ -74,5 +84,11 @@ export function renderWeatherFilterOption(weather: Weather): string {
 
     case Weather.NOT_RAINING:
       return 'Not raining';
+
+    case Weather.OTHER:
+      return 'Other';
+
+    default:
+      throw new Error(`Unknown weather type: ${weather}`);
   }
 }

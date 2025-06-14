@@ -60,7 +60,7 @@
         bind:value={weather}
         class="rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-teal-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-teal-500 dark:focus:ring-teal-500"
       >
-        {#each Object.values(Weather) as weather}
+        {#each Object.values(Weather).filter((weather) => weather !== Weather.OTHER) as weather}
           <option value={weather}>
             {renderWeatherFilterOption(weather)}
           </option>

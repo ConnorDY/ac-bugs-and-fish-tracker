@@ -7,7 +7,7 @@ export interface FishOrBug {
   type: Creature;
   price: number;
   shadow?: Shadow; // only available for fish
-  location: Location[] | string;
+  location: Location[];
   weather: Weather;
   time: Time;
   months: Months;

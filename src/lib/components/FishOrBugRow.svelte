@@ -70,18 +70,22 @@
   {/if}
 
   <td class="creature-location px-3 py-2">
-    {renderLocation(data.location)}
+    {#each data.location as location}
+      <div>
+        {renderLocation(location)}
 
-    {#if isFish && data.weather !== Weather.ANY}
-      <span>
-        ({renderKebabCaseValue(data.weather).toLowerCase()})
-      </span>
-    {/if}
+        {#if isFish && data.weather !== Weather.ANY}
+          <span>
+            ({renderKebabCaseValue(data.weather).toLowerCase()})
+          </span>
+        {/if}
+      </div>
+    {/each}
   </td>
 
   {#if isBug}
     <td class="bug-weather px-3 py-2">
-      {renderWeather(data.weather)}
+      {@html renderWeather(data.weather, data.name)}
     </td>
   {/if}
 
