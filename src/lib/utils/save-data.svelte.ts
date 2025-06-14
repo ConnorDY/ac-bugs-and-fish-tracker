@@ -20,6 +20,15 @@ export function loadSaveData(): void {
 
 /** Saves save data to local storage */
 export function saveSaveData(): void {
+  // trim empty fish or bug entries
+  for (const game of Object.values(saveData.games)) {
+    for (const [fishOrBugName, fishOrBug] of Object.entries(game)) {
+      if (!fishOrBug.caught && !fishOrBug.donated) {
+        delete game[fishOrBugName];
+      }
+    }
+  }
+
   localStorage.setItem(SAVE_DATA_KEY, JSON.stringify(saveData));
 
   console.log('Saved save data to local storage.', $state.snapshot(saveData));
