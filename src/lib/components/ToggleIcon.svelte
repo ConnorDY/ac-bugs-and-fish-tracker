@@ -91,6 +91,8 @@
   .checkbox {
     width: 100%;
     height: 100%;
+
+    color: transparent;
   }
 
   .icon {
