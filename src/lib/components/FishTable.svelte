@@ -1,10 +1,8 @@
 <script lang="ts">
-  import type { Filters } from '$lib/types/filters';
-  import type { FishOrBugWithNum } from '$lib/types/fish-or-bug';
-  import type { Game } from '$lib/types/game';
-  import { filterFishOrBug } from '$lib/utils/filters';
-  import { getCaughtFishAndBugs, getDonatedFishAndBugs } from '$lib/utils/save-data.svelte';
   import FishOrBugRow from './FishOrBugRow.svelte';
+
+  import type { Filters, FishOrBugWithNum, Game } from '$lib/types';
+  import { getCaughtFishAndBugs, getDonatedFishAndBugs, filterFishOrBug } from '$lib/utils';
 
   interface Props {
     game: Game;

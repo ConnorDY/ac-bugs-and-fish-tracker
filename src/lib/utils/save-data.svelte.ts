@@ -1,6 +1,4 @@
-import type { FishOrBug } from '$lib/types/fish-or-bug';
-import type { Game } from '$lib/types/game';
-import type { FishOrBugSaveData, SaveData } from '$lib/types/save-data';
+import type { FishOrBug, FishOrBugSaveData, Game, SaveData } from '$lib/types';
 
 const SAVE_DATA_KEY = 'saved-data';
 

@@ -1,17 +1,16 @@
 <script lang="ts">
-  import { wikiUrl } from '$lib/data/wiki';
-  import { CaughtOrDonatedIcon } from '$lib/types/caught-or-donated-icon';
-  import type { FishOrBugWithNum } from '$lib/types/fish-or-bug';
-  import type { Game } from '$lib/types/game';
-  import { Weather } from '$lib/types/shared';
+  import Months from './Months.svelte';
+  import ToggleIcon from './ToggleIcon.svelte';
+
+  import { wikiUrl } from '$lib/data';
+  import { CaughtOrDonatedIcon, Weather } from '$lib/types';
+  import type { FishOrBugWithNum, Game } from '$lib/types';
   import {
     convert24HourTo12Hour,
     renderKebabCaseValue,
     renderLocation,
     renderWeather
-  } from '$lib/utils/utils';
-  import Months from './Months.svelte';
-  import ToggleIcon from './ToggleIcon.svelte';
+  } from '$lib/utils';
 
   interface Props {
     game: Game;

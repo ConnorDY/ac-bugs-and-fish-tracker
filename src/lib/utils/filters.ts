@@ -1,6 +1,5 @@
-import type { Filters } from '$lib/types/filters';
-import type { FishOrBug } from '$lib/types/fish-or-bug';
-import { Weather } from '$lib/types/shared';
+import type { Filters, FishOrBug } from '$lib/types';
+import { Weather } from '$lib/types';
 
 export function filterFishOrBug(
   fishOrBug: FishOrBug,

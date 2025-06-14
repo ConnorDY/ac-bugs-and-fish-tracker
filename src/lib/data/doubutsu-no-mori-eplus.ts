@@ -2,9 +2,8 @@
  * Doubutsu no Mori e+ (どうぶつの森 e+)
  **/
 
-import { type FishOrBug } from '$lib/types/fish-or-bug';
-import type { Game } from '$lib/types/game';
-import { Creature, Location, Month, Shadow, TimeOfDay, Weather } from '$lib/types/shared';
+import type { FishOrBug, Game } from '$lib/types';
+import { Creature, Location, Month, Shadow, TimeOfDay, Weather } from '$lib/types';
 
 const fish: FishOrBug[] = [
   // 1

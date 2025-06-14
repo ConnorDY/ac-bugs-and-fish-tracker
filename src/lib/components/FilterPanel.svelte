@@ -1,8 +1,10 @@
 <script lang="ts">
-  import { Button } from '$lib/components';
-  import type { Filters } from '$lib/types/filters';
-  import { Weather } from '$lib/types/shared';
-  import { renderWeatherFilterOption } from '$lib/utils/utils';
+  import Button from './Button.svelte';
+  import Checkbox from './Checkbox.svelte';
+
+  import type { Filters } from '$lib/types';
+  import { Weather } from '$lib/types';
+  import { renderWeatherFilterOption } from '$lib/utils';
 
   import { Drawer, CloseButton } from 'flowbite-svelte';
   import { FilterSolid } from 'flowbite-svelte-icons';
@@ -57,23 +59,9 @@
   </div>
 
   <div class="filters flex items-center gap-6 px-4 py-4">
-    <label class="flex items-center gap-2">
-      <input
-        type="checkbox"
-        bind:checked={filters.notCaught}
-        class="h-6 w-6 rounded-sm border-gray-300 text-teal-600 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 checked:dark:bg-teal-600 dark:focus:ring-teal-600"
-      />
-      <span class="dark:text-white">Not caught?</span>
-    </label>
+    <Checkbox bind:checked={filters.notCaught}>Not caught?</Checkbox>
 
-    <label class="flex items-center gap-2">
-      <input
-        type="checkbox"
-        bind:checked={filters.notDonated}
-        class="h-6 w-6 rounded-sm border-gray-300 text-teal-600 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 checked:dark:bg-teal-600 dark:focus:ring-teal-600"
-      />
-      <span class="dark:text-white">Not donated?</span>
-    </label>
+    <Checkbox bind:checked={filters.notDonated}>Not donated?</Checkbox>
 
     <div class="flex items-center gap-2">
       <label for="weather" class="dark:text-white">Weather:</label>

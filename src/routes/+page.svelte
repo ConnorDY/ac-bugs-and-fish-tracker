@@ -1,12 +1,10 @@
 <script lang="ts">
-  import BugTable from '$lib/components/BugTable.svelte';
-  import FilterPanel from '$lib/components/FilterPanel.svelte';
-  import FishTable from '$lib/components/FishTable.svelte';
-  import { DoubutsuNoMoriEPlus } from '$lib/data/doubutsu-no-mori-eplus';
-  import { wikiUrl } from '$lib/data/wiki';
-  import type { Filters } from '$lib/types/filters';
-  import { Weather } from '$lib/types/shared';
-  import { dataLoaded, loadSaveData } from '$lib/utils/save-data.svelte';
+  import { BugTable, FilterPanel, FishTable } from '$lib/components';
+
+  import { DoubutsuNoMoriEPlus, wikiUrl } from '$lib/data';
+  import type { Filters } from '$lib/types';
+  import { Weather } from '$lib/types';
+  import { dataLoaded, loadSaveData } from '$lib/utils';
 
   import { onMount } from 'svelte';
 

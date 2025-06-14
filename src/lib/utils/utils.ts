@@ -1,5 +1,4 @@
-import type { Time, TimeRange } from '$lib/types/shared';
-import { Location, Weather } from '$lib/types/shared';
+import { Location, Weather } from '$lib/types';
 
 export function capitalizeFirstLetter(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);

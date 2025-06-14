@@ -1,9 +1,7 @@
 <script lang="ts">
-  import type { Game } from '$lib/types/game';
-  import { CaughtOrDonatedIcon } from '$lib/types/caught-or-donated-icon';
-  import type { FishOrBug } from '$lib/types/fish-or-bug';
-  import { getFishOrBugData, saveData, updateFishOrBugData } from '$lib/utils/save-data.svelte';
-  import { get } from 'svelte/store';
+  import { CaughtOrDonatedIcon } from '$lib/types';
+  import type { FishOrBug, Game } from '$lib/types';
+  import { getFishOrBugData, updateFishOrBugData } from '$lib/utils';
 
   interface Props {
     game: Game;
