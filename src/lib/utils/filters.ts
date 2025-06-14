@@ -1,5 +1,5 @@
-import type { Filters, FishOrBug, Months } from '$lib/types';
-import { Month, MonthFilter, Weather } from '$lib/types';
+import type { Filters, FishOrBug, Months, TimeFilter, TimeRange } from '$lib/types';
+import { Month, MonthFilter, TimeOfDay, Weather } from '$lib/types';
 
 // use Object.freeze to prevent accidental modification of the default filters
 export const defaultFilters: Filters = Object.freeze({
@@ -8,7 +8,8 @@ export const defaultFilters: Filters = Object.freeze({
   weather: Weather.ANY,
   month: MonthFilter.ANY,
   date: undefined,
-  dateString: ''
+  dateString: '',
+  time: TimeOfDay.ALL_DAY
 });
 
 export function filterByDate(fishOrBug: FishOrBug, date: Date): boolean {
@@ -38,6 +39,26 @@ export function filterByDate(fishOrBug: FishOrBug, date: Date): boolean {
   }
 }
 
+export function filterByTime(fishOrBug: FishOrBug, timeFilter: TimeFilter): boolean {
+  if (fishOrBug.time === TimeOfDay.ALL_DAY) return true;
+
+  const hourFilter = timeFilter as number;
+
+  for (const time of fishOrBug.time as TimeRange[]) {
+    if (time.end > time.start) {
+      if (hourFilter >= time.start && hourFilter <= time.end) {
+        return true;
+      }
+    } else {
+      if (hourFilter >= time.start || hourFilter <= time.end) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+
 export function filterFishOrBug(
   fishOrBug: FishOrBug,
   filters: Filters,
@@ -58,6 +79,9 @@ export function filterFishOrBug(
   ) {
     return false;
   }
+
+  // time filter
+  if (filters.time !== TimeOfDay.ALL_DAY && !filterByTime(fishOrBug, filters.time)) return false;
 
   if (
     filters.weather !== Weather.ANY && // if the filter is set to ANY, we don't filter by weather

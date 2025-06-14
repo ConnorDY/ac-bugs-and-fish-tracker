@@ -1,4 +1,4 @@
-import type { Weather } from './shared';
+import type { TimeOfDay, Weather } from './shared';
 
 export enum MonthFilter {
   ANY = 'any',
@@ -16,6 +16,8 @@ export enum MonthFilter {
   DECEMBER = 'december'
 }
 
+export type TimeFilter = TimeOfDay.ALL_DAY | number;
+
 export interface Filters {
   notCaught: boolean;
   notDonated: boolean;
@@ -23,4 +25,5 @@ export interface Filters {
   month: MonthFilter;
   date?: Date;
   dateString: string;
+  time: TimeFilter;
 }

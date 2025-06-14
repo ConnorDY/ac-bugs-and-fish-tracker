@@ -5,8 +5,13 @@
   import Dropdown from './Dropdown.svelte';
 
   import type { Filters } from '$lib/types';
-  import { MonthFilter, Weather } from '$lib/types';
-  import { defaultFilters, renderKebabCaseValue, renderWeatherFilterOption } from '$lib/utils';
+  import { MonthFilter, TimeOfDay, Weather } from '$lib/types';
+  import {
+    convert24HourTo12Hour,
+    defaultFilters,
+    renderKebabCaseValue,
+    renderWeatherFilterOption
+  } from '$lib/utils';
 
   import { Drawer, CloseButton } from 'flowbite-svelte';
   import { FilterSolid } from 'flowbite-svelte-icons';
@@ -65,7 +70,7 @@
       {/each}
     </Dropdown>
 
-    <Dropdown id="month" label="Month:" bind:value={filters.month}>
+    <Dropdown id="month" label="Month:" bind:value={filters.month} class="w-27">
       {#each Object.values(MonthFilter) as month}
         <option value={month}>
           {renderKebabCaseValue(month)}
@@ -74,6 +79,15 @@
     </Dropdown>
 
     <DatePicker id="date" bind:value={filters.date} bind:dateString={filters.dateString} />
+
+    <Dropdown id="time" label="Time:" bind:value={filters.time} class="w-20">
+      <option value={TimeOfDay.ALL_DAY}> Any </option>
+      {#each Array(24).keys() as hour}
+        <option value={hour}>
+          {convert24HourTo12Hour(hour)}
+        </option>
+      {/each}
+    </Dropdown>
 
     <Button onclick={resetFilters}>Reset filters</Button>
   </div>
