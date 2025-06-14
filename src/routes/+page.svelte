@@ -90,3 +90,46 @@
 {:else}
   <p class="px-4 py-4 text-2xl font-extrabold dark:text-white">Loading data...</p>
 {/if}
+
+<style lang="scss">
+  :global {
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      .num {
+        width: 40px;
+      }
+
+      .caught {
+        width: 80px;
+      }
+
+      .donated {
+        width: 88px;
+      }
+
+      .icon {
+        width: 56px;
+        text-align: center;
+      }
+
+      .name {
+        width: 240px;
+      }
+
+      .sell-price {
+        width: 125px;
+      }
+
+      .time {
+        width: 120px;
+      }
+
+      .months {
+        width: 370px;
+      }
+    }
+  }
+</style>

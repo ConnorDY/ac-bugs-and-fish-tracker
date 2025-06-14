@@ -5,9 +5,9 @@
   import type { Game } from '$lib/types/game';
   import { Weather } from '$lib/types/shared';
   import {
+    convert24HourTo12Hour,
     renderKebabCaseValue,
     renderLocation,
-    renderTime,
     renderWeather
   } from '$lib/utils/utils';
   import Months from './Months.svelte';
@@ -41,6 +41,10 @@
     <ToggleIcon {game} fishOrBug={data} type={CaughtOrDonatedIcon.MUSEUM} />
   </td>
 
+  <td class="creature-icon px-3 py-2">
+    <img src={iconPath} alt={`${data.name} icon`} />
+  </td>
+
   <td class="creature-name px-3 py-2">
     {#if data.wikiPage}
       <a href={`${wikiUrl}${data.wikiPage}`}>
@@ -51,23 +55,12 @@
     {/if}
   </td>
 
-  <td class="creature-icon px-3 py-2"><img src={iconPath} alt={`${data.name} icon`} /></td>
-
   <td class="creature-price px-3 py-2">
     <div class="flex items-center gap-1">
       <img src="icons/bells.png" alt="Bells icon" />
       <span>{data.price.toLocaleString()} bells</span>
     </div>
   </td>
-
-  {#if isFish}
-    <td class="fish-shadow px-3 py-2">
-      <div class="flex items-center">
-        <img src={shadowIconPath} alt="" aria-hidden={true} />
-        <span>{renderKebabCaseValue(data.shadow!, true)}</span>
-      </div>
-    </td>
-  {/if}
 
   <td class="creature-location px-3 py-2">
     {#each data.location as location}
@@ -83,6 +76,15 @@
     {/each}
   </td>
 
+  {#if isFish}
+    <td class="fish-shadow px-3 py-2">
+      <div class="flex items-center">
+        <img src={shadowIconPath} alt="" aria-hidden={true} />
+        <span>{renderKebabCaseValue(data.shadow!, true)}</span>
+      </div>
+    </td>
+  {/if}
+
   {#if isBug}
     <td class="bug-weather px-3 py-2">
       {@html renderWeather(data.weather, data.name)}
@@ -90,7 +92,19 @@
   {/if}
 
   <td class="creature-time px-3 py-2">
-    {renderTime(data.time)}
+    {#if typeof data.time === 'string'}
+      {renderKebabCaseValue(data.time)}
+    {:else}
+      {#each data.time as t, index}
+        <div>
+          {convert24HourTo12Hour(t.start)}
+          –
+          {convert24HourTo12Hour(t.end)}{#if index < data.time.length - 1}
+            ;
+          {/if}
+        </div>
+      {/each}
+    {/if}
   </td>
 
   <td class="creature-months px-3 py-2">
