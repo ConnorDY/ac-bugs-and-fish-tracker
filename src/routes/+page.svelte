@@ -15,6 +15,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>Doubutsu no Mori e+ Bugs and Fish Tracker</title>
+</svelte:head>
+
 {#if dataLoaded.loaded}
   <FilterPanel bind:filters />
 
