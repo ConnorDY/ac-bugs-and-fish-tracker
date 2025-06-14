@@ -14,10 +14,12 @@ export const defaultFilters: Filters = Object.freeze({
 
 export function filterByDate(fishOrBug: FishOrBug, date: Date): boolean {
   const dayOfMonth = date.getDate();
-
   const monthIndex = date.getMonth() + 1; // getMonth() returns 0-11, so we add 1
-  const month = Object.values(MonthFilter)[monthIndex];
 
+  // get the name of the month
+  const month = Object.values(MonthFilter)[monthIndex]; // the first value in MonthsFilter is 'ANY', so we can use the monthIndex directly
+
+  // check if the fish is available in the selected month
   const fishOrBugMonthValue = Object.prototype.hasOwnProperty.call(fishOrBug.months, month)
     ? fishOrBug.months[month as keyof Months]
     : undefined;
@@ -34,22 +36,26 @@ export function filterByDate(fishOrBug: FishOrBug, date: Date): boolean {
       if (dayOfMonth > 15) return true;
       return false;
 
+    // fish is not available in the selected month
     default:
       return false;
   }
 }
 
 export function filterByTime(fishOrBug: FishOrBug, timeFilter: TimeFilter): boolean {
+  // if the fish or bug is available all day, we don't need to filter by time
   if (fishOrBug.time === TimeOfDay.ALL_DAY) return true;
 
   const hourFilter = timeFilter as number;
 
   for (const time of fishOrBug.time as TimeRange[]) {
     if (time.end > time.start) {
+      // time ranges that do not cross midnight
       if (hourFilter >= time.start && hourFilter <= time.end) {
         return true;
       }
     } else {
+      // time ranges that cross midnight
       if (hourFilter >= time.start || hourFilter <= time.end) {
         return true;
       }
@@ -73,7 +79,7 @@ export function filterFishOrBug(
 
   // month filter
   if (
-    !filters.date && // if the date filter is set, we don't filter by month
+    !filters.date && // if the date filter is set, ignore the month filter
     filters.month !== MonthFilter.ANY &&
     !Object.prototype.hasOwnProperty.call(fishOrBug.months, filters.month)
   ) {
@@ -83,6 +89,7 @@ export function filterFishOrBug(
   // time filter
   if (filters.time !== TimeOfDay.ALL_DAY && !filterByTime(fishOrBug, filters.time)) return false;
 
+  // weather filter
   if (
     filters.weather !== Weather.ANY && // if the filter is set to ANY, we don't filter by weather
     fishOrBug.weather !== Weather.ANY && // if the fish or bug's weather is ANY, we don't filter by weather
