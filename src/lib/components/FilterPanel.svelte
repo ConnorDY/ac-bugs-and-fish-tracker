@@ -1,6 +1,7 @@
 <script lang="ts">
   import Button from './Button.svelte';
   import Checkbox from './Checkbox.svelte';
+  import DatePicker from './DatePicker.svelte';
   import Dropdown from './Dropdown.svelte';
 
   import type { Filters } from '$lib/types';
@@ -14,7 +15,7 @@
   const drawerLabelId = 'filter-panel-label';
 
   interface Props {
-    filters?: Filters;
+    filters: Filters;
   }
 
   let { filters = $bindable({ ...defaultFilters }) }: Props = $props();
@@ -71,6 +72,8 @@
         </option>
       {/each}
     </Dropdown>
+
+    <DatePicker id="date" bind:value={filters.date} bind:dateString={filters.dateString} />
 
     <Button onclick={resetFilters}>Reset filters</Button>
   </div>

@@ -21,4 +21,6 @@ export interface Filters {
   notDonated: boolean;
   weather: Weather;
   month: MonthFilter;
+  date?: Date;
+  dateString: string;
 }
