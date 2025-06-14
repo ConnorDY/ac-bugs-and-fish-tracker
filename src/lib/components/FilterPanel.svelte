@@ -4,8 +4,8 @@
   import Dropdown from './Dropdown.svelte';
 
   import type { Filters } from '$lib/types';
-  import { Weather } from '$lib/types';
-  import { renderWeatherFilterOption } from '$lib/utils';
+  import { MonthFilter, Weather } from '$lib/types';
+  import { defaultFilters, renderKebabCaseValue, renderWeatherFilterOption } from '$lib/utils';
 
   import { Drawer, CloseButton } from 'flowbite-svelte';
   import { FilterSolid } from 'flowbite-svelte-icons';
@@ -17,21 +17,13 @@
     filters?: Filters;
   }
 
-  let {
-    filters = $bindable({
-      notCaught: false,
-      notDonated: false,
-      weather: Weather.ANY
-    })
-  }: Props = $props();
+  let { filters = $bindable({ ...defaultFilters }) }: Props = $props();
 
   let hidden = $state(true);
 
   const resetFilters = () => {
     filters = {
-      notCaught: false,
-      notDonated: false,
-      weather: Weather.ANY
+      ...defaultFilters
     };
   };
 </script>
@@ -68,6 +60,14 @@
       {#each Object.values(Weather).filter((weather) => weather !== Weather.OTHER) as weather}
         <option value={weather}>
           {renderWeatherFilterOption(weather)}
+        </option>
+      {/each}
+    </Dropdown>
+
+    <Dropdown id="month" label="Month:" bind:value={filters.month}>
+      {#each Object.values(MonthFilter) as month}
+        <option value={month}>
+          {renderKebabCaseValue(month)}
         </option>
       {/each}
     </Dropdown>

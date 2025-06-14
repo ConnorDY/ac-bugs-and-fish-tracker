@@ -61,7 +61,7 @@
       var(--color-gray-400) 100%
     );
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   .month.second-half {
@@ -73,6 +73,6 @@
       var(--color-teal-600) 100%
     );
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    background-clip: text;
   }
 </style>

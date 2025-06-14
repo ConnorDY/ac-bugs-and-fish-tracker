@@ -3,16 +3,11 @@
 
   import { DoubutsuNoMoriEPlus, wikiUrl } from '$lib/data';
   import type { Filters } from '$lib/types';
-  import { Weather } from '$lib/types';
-  import { dataLoaded, loadSaveData } from '$lib/utils';
+  import { dataLoaded, defaultFilters, loadSaveData } from '$lib/utils';
 
   import { onMount } from 'svelte';
 
-  let filters = $state<Filters>({
-    notCaught: false,
-    notDonated: false,
-    weather: Weather.ANY
-  });
+  let filters = $state<Filters>({ ...defaultFilters });
 
   onMount(() => {
     loadSaveData();
