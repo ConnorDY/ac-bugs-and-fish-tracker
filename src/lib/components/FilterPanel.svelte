@@ -48,17 +48,17 @@
   aria-labelledby={drawerLabelId}
   class="w-full"
 >
-  <div class="flex items-center justify-between">
+  <div class="mb-2 flex items-center justify-between">
     <h2
       id={drawerLabelId}
-      class="mb-4 inline-flex items-center text-xl font-semibold text-gray-500 dark:text-gray-300"
+      class="inline-flex items-center text-xl font-semibold text-gray-500 dark:text-gray-300"
     >
       <FilterSolid class="me-2.5 h-5 w-5" />Filters
     </h2>
-    <CloseButton onclick={() => (hidden = true)} class="mb-4 dark:text-white" />
+    <CloseButton onclick={() => (hidden = true)} class="dark:text-white" />
   </div>
 
-  <div class="filters flex items-center gap-6 px-4 py-4">
+  <div class="filters flex items-center gap-6">
     <Checkbox bind:checked={filters.notCaught}>Not caught?</Checkbox>
 
     <Checkbox bind:checked={filters.notDonated}>Not donated?</Checkbox>
