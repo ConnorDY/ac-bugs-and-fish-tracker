@@ -1,6 +1,7 @@
 <script lang="ts">
   import Button from './Button.svelte';
   import Checkbox from './Checkbox.svelte';
+  import Dropdown from './Dropdown.svelte';
 
   import type { Filters } from '$lib/types';
   import { Weather } from '$lib/types';
@@ -63,20 +64,13 @@
 
     <Checkbox bind:checked={filters.notDonated}>Not donated?</Checkbox>
 
-    <div class="flex items-center gap-2">
-      <label for="weather" class="dark:text-white">Weather:</label>
-      <select
-        id="weather"
-        bind:value={filters.weather}
-        class="rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-teal-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-teal-500 dark:focus:ring-teal-500"
-      >
-        {#each Object.values(Weather).filter((weather) => weather !== Weather.OTHER) as weather}
-          <option value={weather}>
-            {renderWeatherFilterOption(weather)}
-          </option>
-        {/each}
-      </select>
-    </div>
+    <Dropdown id="weather" label="Weather:" bind:value={filters.weather}>
+      {#each Object.values(Weather).filter((weather) => weather !== Weather.OTHER) as weather}
+        <option value={weather}>
+          {renderWeatherFilterOption(weather)}
+        </option>
+      {/each}
+    </Dropdown>
 
     <Button onclick={resetFilters}>Reset filters</Button>
   </div>
