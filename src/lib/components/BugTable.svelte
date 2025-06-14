@@ -1,14 +1,17 @@
 <script lang="ts">
+  import FishOrBugRow from './FishOrBugRow.svelte';
+
   import type { Filters, FishOrBugWithNum, Game } from '$lib/types';
   import { getCaughtFishAndBugs, getDonatedFishAndBugs, filterFishOrBug } from '$lib/utils';
 
-  import FishOrBugRow from './FishOrBugRow.svelte';
+  import { untrack } from 'svelte';
 
   interface Props {
     game: Game;
     filters: Filters;
+    numBugs: number;
   }
-  let { game, filters }: Props = $props();
+  let { game, filters, numBugs = $bindable(game.bugs.length) }: Props = $props();
 
   // add a number to each bug
   const bugsWithNum = $state<FishOrBugWithNum[]>(
@@ -28,6 +31,10 @@
         filterFishOrBug(bug, filters, caughtFishAndBugs, donatedFishAndBugs)
       )
     ];
+
+    untrack(() => {
+      numBugs = filteredBugs.length;
+    });
   });
 </script>
 

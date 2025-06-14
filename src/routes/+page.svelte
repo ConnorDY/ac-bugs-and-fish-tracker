@@ -10,6 +10,9 @@
 
   let filters = $state<Filters>({ ...defaultFilters });
 
+  let numFish = $state(DoubutsuNoMoriEPlus.fish.length);
+  let numBugs = $state(DoubutsuNoMoriEPlus.bugs.length);
+
   onMount(() => {
     loadSaveData();
   });
@@ -23,8 +26,9 @@
   <FilterPanel bind:filters />
 
   <div class="flex items-center gap-4">
-    <h2 id="fish-table" class="px-4 py-4 text-4xl font-extrabold dark:text-white">
+    <h2 id="fish-table" class="py-4 pl-4 text-4xl font-extrabold dark:text-white">
       <a href={`${wikiUrl}${DoubutsuNoMoriEPlus.fishWikiPage}`} target="_blank">Fish</a>
+      ({numFish})
     </h2>
 
     <a href="#bugs-table">
@@ -33,11 +37,12 @@
     </a>
   </div>
 
-  <FishTable game={DoubutsuNoMoriEPlus} {filters} />
+  <FishTable game={DoubutsuNoMoriEPlus} {filters} bind:numFish />
 
   <div class="flex items-center gap-4">
-    <h2 id="bugs-table" class="px-4 py-4 text-4xl font-extrabold dark:text-white">
+    <h2 id="bugs-table" class="py-4 pl-4 text-4xl font-extrabold dark:text-white">
       <a href={`${wikiUrl}${DoubutsuNoMoriEPlus.bugsWikiPage}`} target="_blank">Bugs</a>
+      ({numBugs})
     </h2>
 
     <a href="#fish-table">
@@ -46,7 +51,7 @@
     </a>
   </div>
 
-  <BugTable game={DoubutsuNoMoriEPlus} {filters} />
+  <BugTable game={DoubutsuNoMoriEPlus} {filters} bind:numBugs />
 {:else}
   <p class="px-4 py-4 text-2xl font-extrabold dark:text-white">Loading data...</p>
 {/if}

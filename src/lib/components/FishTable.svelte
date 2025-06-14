@@ -3,12 +3,14 @@
 
   import type { Filters, FishOrBugWithNum, Game } from '$lib/types';
   import { getCaughtFishAndBugs, getDonatedFishAndBugs, filterFishOrBug } from '$lib/utils';
+  import { untrack } from 'svelte';
 
   interface Props {
     game: Game;
     filters: Filters;
+    numFish?: number;
   }
-  let { game, filters }: Props = $props();
+  let { game, filters, numFish = $bindable(game.fish.length) }: Props = $props();
 
   // add a number to each fish
   const fishWithNum = $state<FishOrBugWithNum[]>(
@@ -28,6 +30,10 @@
         filterFishOrBug(fish, filters, caughtFishAndBugs, donatedFishAndBugs)
       )
     ];
+
+    untrack(() => {
+      numFish = filteredFish.length;
+    });
   });
 </script>
 
