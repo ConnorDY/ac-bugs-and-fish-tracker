@@ -46,7 +46,7 @@
 
   <td class="creature-name px-3 py-2">
     {#if data.wikiPage}
-      <a href={`${wikiUrl}${data.wikiPage}`}>
+      <a href={`${wikiUrl}${data.wikiPage}`} target="_blank">
         {data.name}
       </a>
     {:else}

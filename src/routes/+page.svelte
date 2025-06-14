@@ -6,6 +6,7 @@
   import { dataLoaded, defaultFilters, loadSaveData } from '$lib/utils';
 
   import { onMount } from 'svelte';
+  import { ArrowDownOutline, ArrowUpOutline } from 'flowbite-svelte-icons';
 
   let filters = $state<Filters>({ ...defaultFilters });
 
@@ -17,15 +18,29 @@
 {#if dataLoaded.loaded}
   <FilterPanel bind:filters />
 
-  <h2 class="px-4 py-4 text-4xl font-extrabold dark:text-white">
-    <a href={`${wikiUrl}${DoubutsuNoMoriEPlus.fishWikiPage}`}>Fish</a>
-  </h2>
+  <div class="flex items-center gap-4">
+    <h2 id="fish-table" class="px-4 py-4 text-4xl font-extrabold dark:text-white">
+      <a href={`${wikiUrl}${DoubutsuNoMoriEPlus.fishWikiPage}`} target="_blank">Fish</a>
+    </h2>
+
+    <a href="#bugs-table">
+      <ArrowDownOutline size="xl" color="var(--color-teal-600)" />
+      <span class="sr-only">Jump to Bugs table</span>
+    </a>
+  </div>
 
   <FishTable game={DoubutsuNoMoriEPlus} {filters} />
 
-  <h2 class="px-4 py-4 text-4xl font-extrabold dark:text-white">
-    <a href={`${wikiUrl}${DoubutsuNoMoriEPlus.bugsWikiPage}`}>Bugs</a>
-  </h2>
+  <div class="flex items-center gap-4">
+    <h2 id="bugs-table" class="px-4 py-4 text-4xl font-extrabold dark:text-white">
+      <a href={`${wikiUrl}${DoubutsuNoMoriEPlus.bugsWikiPage}`} target="_blank">Bugs</a>
+    </h2>
+
+    <a href="#fish-table">
+      <ArrowUpOutline size="xl" color="var(--color-teal-600)" />
+      <span class="sr-only">Jump to Fish table</span>
+    </a>
+  </div>
 
   <BugTable game={DoubutsuNoMoriEPlus} {filters} />
 {:else}
