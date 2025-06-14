@@ -48,6 +48,14 @@
   </thead>
 
   <tbody>
+    {#if filteredBugs.length === 0}
+      <tr class="border-b border-gray-200 dark:border-gray-700">
+        <td colspan="10" class="py-4 text-center text-gray-300">
+          No bugs found matching selected filters.
+        </td>
+      </tr>
+    {/if}
+
     {#each filteredBugs as bug (bug.name)}
       <FishOrBugRow {game} data={bug} />
     {/each}
