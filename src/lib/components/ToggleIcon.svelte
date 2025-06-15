@@ -67,7 +67,7 @@
   };
 </script>
 
-<label class="toggle-icon flex">
+<label class="toggle-icon relative flex">
   <input
     type="checkbox"
     checked={active}
