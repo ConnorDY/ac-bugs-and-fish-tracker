@@ -58,6 +58,16 @@
 
 <style lang="scss">
   :global {
+    .table-wrapper {
+      max-width: 100vw;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 1300px;
+    }
+
     thead {
       position: sticky;
       top: 0;

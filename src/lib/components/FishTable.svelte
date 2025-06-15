@@ -1,9 +1,16 @@
 <script lang="ts">
   import FishOrBugRow from './FishOrBugRow.svelte';
+  import { IconCell, LocationCell, PriceCell } from './cells';
+  import type { IconCellProps, LocationCellProps, PriceCellProps } from './cells';
 
   import type { Filters, FishOrBugWithNum, Game } from '$lib/types';
   import { getCaughtFishAndBugs, getDonatedFishAndBugs, filterFishOrBug } from '$lib/utils';
+
   import { untrack } from 'svelte';
+  import { type GridOptions, type Module } from '@ag-grid-community/core';
+  import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
+  import { themeQuartz } from '@ag-grid-community/theming';
+  import AgGridSvelte5Component, { AgGridSvelteRendererComp } from 'ag-grid-svelte5';
 
   interface Props {
     game: Game;
@@ -21,6 +28,61 @@
   );
   let filteredFish = $state([...fishWithNum]);
 
+  const gridOptions = $state<GridOptions<FishOrBugWithNum>>({
+    columnDefs: [
+      { field: 'num', headerName: '#', width: 40 },
+      // { field: 'caught', headerName: 'Caught?', width: 100 }
+      // { field: 'donated', headerName: 'Donated?', width: 100 },
+      {
+        field: 'icon',
+        headerName: 'Icon',
+        sortable: false,
+        width: 56,
+        cellRenderer: AgGridSvelteRendererComp,
+        cellRendererParams: (params: IconCellProps) => ({
+          component: IconCell,
+          ...params,
+          game
+        })
+      },
+      { field: 'name', headerName: 'Name' },
+      {
+        field: 'price',
+        headerName: 'Sell price',
+        width: 125,
+        cellRenderer: AgGridSvelteRendererComp,
+        cellRendererParams: (params: LocationCellProps) => ({
+          component: PriceCell,
+          ...params
+        })
+      },
+      {
+        field: 'location',
+        headerName: 'Location',
+        cellRenderer: AgGridSvelteRendererComp,
+        cellRendererParams: (params: LocationCellProps) => ({
+          component: LocationCell,
+          ...params
+        })
+      }
+      // { field: 'shadowSize', headerName: 'Shadow size', width: 150 },
+      // { field: 'time', headerName: 'Time', width: 150 },
+      // { field: 'months', headerName: 'Months', width: 150 }
+    ],
+    getRowId: (params) => params.data.num.toString(),
+    domLayout: 'autoHeight',
+    theme: themeQuartz
+  });
+
+  const modules: Module[] = [ClientSideRowModelModule];
+
+  const theme = themeQuartz.withParams({
+    accentColor: 'var(--color-teal-600)',
+    backgroundColor: 'var(--color-gray-900)',
+    oddRowBackgroundColor: 'var(--color-gray-800)',
+    foregroundColor: 'var(--color-gray-300)'
+  });
+
   $effect(() => {
     const caughtFishAndBugs = getCaughtFishAndBugs(game);
     const donatedFishAndBugs = getDonatedFishAndBugs(game);
@@ -37,33 +99,37 @@
   });
 </script>
 
-<table class="dark:test-gray-400 w-full text-left text-sm text-gray-300 rtl:text-right">
-  <thead class="bg-gray-50 text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-300">
-    <tr>
-      <th class="num px-3 py-3">#</th>
-      <th class="caught px-3 py-3">Caught?</th>
-      <th class="donated px-3 py-3">Donated?</th>
-      <th class="icon px-3 py-3">Icon</th>
-      <th class="name px-3 py-3">Name</th>
-      <th class="sell-price px-3 py-3">Sell price</th>
-      <th class="px-3 py-3">Location</th>
-      <th class="px-8 py-3">Shadow size</th>
-      <th class="time px-3 py-3">Time</th>
-      <th class="months px-3 py-3">Months</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {#if filteredFish.length === 0}
-      <tr class="border-b border-gray-200 dark:border-gray-700">
-        <td colspan="10" class="py-4 text-center text-gray-300">
-          No fish found matching selected filters.
-        </td>
+<div class="table-wrapper">
+  <table class="dark:test-gray-400 w-full text-left text-sm text-gray-300 rtl:text-right">
+    <thead class="bg-gray-50 text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-300">
+      <tr>
+        <th class="num px-3 py-3">#</th>
+        <th class="caught px-3 py-3">Caught?</th>
+        <th class="donated px-3 py-3">Donated?</th>
+        <th class="icon px-3 py-3">Icon</th>
+        <th class="name px-3 py-3">Name</th>
+        <th class="sell-price px-3 py-3">Sell price</th>
+        <th class="px-3 py-3">Location</th>
+        <th class="px-8 py-3">Shadow size</th>
+        <th class="time px-3 py-3">Time</th>
+        <th class="months px-3 py-3">Months</th>
       </tr>
-    {/if}
+    </thead>
 
-    {#each filteredFish as fish (fish.name)}
-      <FishOrBugRow {game} data={fish} />
-    {/each}
-  </tbody>
-</table>
+    <tbody>
+      {#if filteredFish.length === 0}
+        <tr class="border-b border-gray-200 dark:border-gray-700">
+          <td colspan="10" class="py-4 text-center text-gray-300">
+            No fish found matching selected filters.
+          </td>
+        </tr>
+      {/if}
+
+      {#each filteredFish as fish (fish.name)}
+        <FishOrBugRow {game} data={fish} />
+      {/each}
+    </tbody>
+  </table>
+</div>
+
+<AgGridSvelte5Component {gridOptions} rowData={filteredFish} {modules} {theme} />
